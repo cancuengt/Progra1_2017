@@ -103,6 +103,7 @@ public class proyecto extends javax.swing.JFrame {
         jLabel10 = new javax.swing.JLabel();
         jFrame3 = new javax.swing.JFrame();
         jLabel11 = new javax.swing.JLabel();
+        parqueo301 = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
@@ -248,21 +249,30 @@ public class proyecto extends javax.swing.JFrame {
 
         jLabel11.setText("Sotano 3");
 
+        parqueo301.setText("jButton14");
+
         javax.swing.GroupLayout jFrame3Layout = new javax.swing.GroupLayout(jFrame3.getContentPane());
         jFrame3.getContentPane().setLayout(jFrame3Layout);
         jFrame3Layout.setHorizontalGroup(
             jFrame3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jFrame3Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel11)
-                .addContainerGap(325, Short.MAX_VALUE))
+                .addGroup(jFrame3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jFrame3Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel11))
+                    .addGroup(jFrame3Layout.createSequentialGroup()
+                        .addGap(51, 51, 51)
+                        .addComponent(parqueo301, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(283, Short.MAX_VALUE))
         );
         jFrame3Layout.setVerticalGroup(
             jFrame3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jFrame3Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel11)
-                .addContainerGap(273, Short.MAX_VALUE))
+                .addGap(42, 42, 42)
+                .addComponent(parqueo301, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(146, Short.MAX_VALUE))
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -493,5 +503,6 @@ public class proyecto extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JButton parqueo301;
     // End of variables declaration//GEN-END:variables
 }
