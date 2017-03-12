@@ -224,22 +224,64 @@
       </SubComponents>
     </Container>
     <Container class="javax.swing.JFrame" name="jFrame3">
+      <Properties>
+        <Property name="size" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[800, 500]"/>
+        </Property>
+      </Properties>
 
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" attributes="0">
-                  <Group type="103" groupAlignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="jLabel11" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
+              </Group>
+              <Group type="102" alignment="1" attributes="0">
+                  <Group type="103" groupAlignment="1" attributes="0">
                       <Group type="102" attributes="0">
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jLabel11" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="108" max="-2" attributes="0"/>
+                          <Component id="Parqueo301" min="-2" pref="50" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="64" max="-2" attributes="0"/>
+                          <Component id="Parqueo303" min="-2" pref="50" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="66" max="-2" attributes="0"/>
+                          <Component id="Parqueo305" min="-2" pref="50" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="69" max="-2" attributes="0"/>
+                          <Component id="Parqueo307" min="-2" pref="50" max="-2" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
+                          <Component id="Parqueo309" min="-2" pref="50" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="66" max="-2" attributes="0"/>
+                          <Component id="Parqueo311" min="-2" pref="50" max="-2" attributes="0"/>
                       </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="51" max="-2" attributes="0"/>
-                          <Component id="parqueo301" min="-2" pref="44" max="-2" attributes="0"/>
+                      <Group type="102" alignment="1" attributes="0">
+                          <Group type="103" groupAlignment="1" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace min="-2" pref="216" max="-2" attributes="0"/>
+                                  <Component id="jButton14" min="-2" pref="100" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="146" max="-2" attributes="0"/>
+                                  <Component id="jButton17" pref="100" max="32767" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="1" attributes="0">
+                                  <EmptySpace max="32767" attributes="0"/>
+                                  <Component id="Parqueo302" min="-2" pref="50" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="53" max="-2" attributes="0"/>
+                                  <Component id="Parqueo304" min="-2" pref="50" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="66" max="-2" attributes="0"/>
+                                  <Component id="Parqueo306" min="-2" pref="50" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="58" max="-2" attributes="0"/>
+                                  <Component id="Parqueo308" min="-2" pref="50" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="54" max="-2" attributes="0"/>
+                                  <Component id="Parqueo310" min="-2" pref="50" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
+                          <Component id="Parqueo312" min="-2" pref="50" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
+                          <Component id="Parqueo314" min="-2" pref="50" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <EmptySpace pref="283" max="32767" attributes="0"/>
+                  <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -248,9 +290,38 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="jLabel11" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
-                  <Component id="parqueo301" min="-2" pref="85" max="-2" attributes="0"/>
-                  <EmptySpace pref="146" max="32767" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="Parqueo303" alignment="3" min="-2" pref="75" max="-2" attributes="0"/>
+                              <Component id="Parqueo305" alignment="3" min="-2" pref="75" max="-2" attributes="0"/>
+                              <Component id="Parqueo307" alignment="3" min="-2" pref="75" max="-2" attributes="0"/>
+                              <Component id="Parqueo309" alignment="3" min="-2" pref="75" max="-2" attributes="0"/>
+                              <Component id="Parqueo311" alignment="3" min="-2" pref="75" max="-2" attributes="0"/>
+                              <Component id="Parqueo301" alignment="3" min="-2" pref="75" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="90" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="Parqueo314" alignment="3" min="-2" pref="75" max="-2" attributes="0"/>
+                              <Component id="Parqueo310" alignment="3" min="-2" pref="75" max="-2" attributes="0"/>
+                              <Component id="Parqueo312" alignment="3" min="-2" pref="75" max="-2" attributes="0"/>
+                              <Component id="Parqueo308" alignment="3" min="-2" pref="75" max="-2" attributes="0"/>
+                              <Component id="Parqueo306" alignment="3" min="-2" pref="75" max="-2" attributes="0"/>
+                              <Component id="Parqueo304" alignment="3" min="-2" pref="75" max="-2" attributes="0"/>
+                              <Component id="Parqueo302" alignment="3" min="-2" pref="75" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="39" pref="104" max="32767" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="1" attributes="0">
+                          <EmptySpace max="32767" attributes="0"/>
+                          <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                              <Component id="jButton17" max="32767" attributes="0"/>
+                              <Component id="jButton14" max="32767" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
               </Group>
           </Group>
         </DimensionLayout>
@@ -261,9 +332,89 @@
             <Property name="text" type="java.lang.String" value="Sotano 3"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="parqueo301">
+        <Component class="javax.swing.JButton" name="Parqueo301">
           <Properties>
             <Property name="text" type="java.lang.String" value="jButton14"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Parqueo301ActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="Parqueo303">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Parqueo302"/>
+            <Property name="toolTipText" type="java.lang.String" value=""/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Parqueo303ActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="Parqueo305">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="jButton14"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="Parqueo307">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="jButton17"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Parqueo307ActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="Parqueo309">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="jButton18"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="Parqueo311">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="jButton19"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="Parqueo302">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="jButton14"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="Parqueo304">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="jButton17"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="Parqueo306">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="jButton18"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="Parqueo308">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="jButton19"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="Parqueo310">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="jButton20"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="Parqueo312">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="jButton21"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="Parqueo314">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="jButton22"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="jButton14">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="jButton14"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="jButton17">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="jButton17"/>
           </Properties>
         </Component>
       </SubComponents>
