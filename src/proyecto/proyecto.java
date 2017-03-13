@@ -58,27 +58,27 @@ public class proyecto extends javax.swing.JFrame {
             libre+= this.sotano1[i].libre();
         }
         libres+=libre;
-        jLabel1.setText(Integer.toString(libre));
-        jLabel2.setText(Integer.toString(this.sotano1.length-libre));
+        lSotano1Libre.setText(Integer.toString(libre));
+        lSotano1ocupado.setText(Integer.toString(this.sotano1.length-libre));
 
         libre = 0;
         for(int i = 0 ; i < this.sotano2.length; i++) {
             libre+= this.sotano2[i].libre();
         }
         libres+=libre;
-        jLabel3.setText(Integer.toString(libre));
-        jLabel4.setText(Integer.toString(this.sotano2.length-libre));
+        lSotano2libre.setText(Integer.toString(libre));
+        lSotano2ocupado.setText(Integer.toString(this.sotano2.length-libre));
 
         libre = 0;
         for(int i = 0 ; i < this.sotano3.length; i++) {
             libre+= this.sotano3[i].libre();
         }
         libres+=libre;
-        jLabel5.setText(Integer.toString(libre));
-        jLabel6.setText(Integer.toString(this.sotano3.length-libre));
+        lSotano3libre.setText(Integer.toString(libre));
+        lSotano3ocupado.setText(Integer.toString(this.sotano3.length-libre));
 
-        jLabel7.setText(Integer.toString(libres));
-        jLabel8.setText(Integer.toString(this.sotano1.length+this.sotano2.length+this.sotano3.length-libres));
+        lTotalLibre.setText(Integer.toString(libres));
+        lTotalOcupado.setText(Integer.toString(this.sotano1.length+this.sotano2.length+this.sotano3.length-libres));
     }
 
     private void accionParqueo(Parqueo parqueo){
@@ -108,7 +108,7 @@ public class proyecto extends javax.swing.JFrame {
     private void initComponents() {
 
         fSotano1 = new javax.swing.JFrame();
-        jLabel9 = new javax.swing.JLabel();
+        lSotano1titulo = new javax.swing.JLabel();
         jButton4 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
         jButton6 = new javax.swing.JButton();
@@ -122,9 +122,9 @@ public class proyecto extends javax.swing.JFrame {
         jButton15 = new javax.swing.JButton();
         jButton16 = new javax.swing.JButton();
         fSotano2 = new javax.swing.JFrame();
-        jLabel10 = new javax.swing.JLabel();
-        jFrame3 = new javax.swing.JFrame();
-        jLabel11 = new javax.swing.JLabel();
+        lSotano2titulo = new javax.swing.JLabel();
+        fSotano3 = new javax.swing.JFrame();
+        lSotano3titulo = new javax.swing.JLabel();
         Parqueo301 = new javax.swing.JButton();
         Parqueo303 = new javax.swing.JButton();
         Parqueo305 = new javax.swing.JButton();
@@ -138,21 +138,21 @@ public class proyecto extends javax.swing.JFrame {
         Parqueo310 = new javax.swing.JButton();
         Parqueo312 = new javax.swing.JButton();
         Parqueo314 = new javax.swing.JButton();
-        jButton14 = new javax.swing.JButton();
+        bSotano3regresar = new javax.swing.JButton();
         jButton17 = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
+        bSotano1ir = new javax.swing.JButton();
+        bSotano2ir = new javax.swing.JButton();
+        bSotano3ir = new javax.swing.JButton();
+        lSotano1Libre = new javax.swing.JLabel();
+        lSotano1ocupado = new javax.swing.JLabel();
+        lSotano2libre = new javax.swing.JLabel();
+        lSotano2ocupado = new javax.swing.JLabel();
+        lSotano3libre = new javax.swing.JLabel();
+        lSotano3ocupado = new javax.swing.JLabel();
+        lTotalLibre = new javax.swing.JLabel();
+        lTotalOcupado = new javax.swing.JLabel();
 
-        jLabel9.setText("Sotano 1");
+        lSotano1titulo.setText("Sotano 1");
 
         jButton4.setText("jButton4");
         jButton4.setPreferredSize(new java.awt.Dimension(50, 75));
@@ -208,7 +208,7 @@ public class proyecto extends javax.swing.JFrame {
                 .addGroup(fSotano1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(fSotano1Layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jLabel9))
+                        .addComponent(lSotano1titulo))
                     .addGroup(fSotano1Layout.createSequentialGroup()
                         .addGap(139, 139, 139)
                         .addGroup(fSotano1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -242,7 +242,7 @@ public class proyecto extends javax.swing.JFrame {
             fSotano1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(fSotano1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel9)
+                .addComponent(lSotano1titulo)
                 .addGap(61, 61, 61)
                 .addGroup(fSotano1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -264,7 +264,7 @@ public class proyecto extends javax.swing.JFrame {
                 .addGap(33, 33, 33))
         );
 
-        jLabel10.setText("Sotano 2");
+        lSotano2titulo.setText("Sotano 2");
 
         javax.swing.GroupLayout fSotano2Layout = new javax.swing.GroupLayout(fSotano2.getContentPane());
         fSotano2.getContentPane().setLayout(fSotano2Layout);
@@ -272,20 +272,20 @@ public class proyecto extends javax.swing.JFrame {
             fSotano2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(fSotano2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel10)
+                .addComponent(lSotano2titulo)
                 .addContainerGap(325, Short.MAX_VALUE))
         );
         fSotano2Layout.setVerticalGroup(
             fSotano2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(fSotano2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel10)
+                .addComponent(lSotano2titulo)
                 .addContainerGap(273, Short.MAX_VALUE))
         );
 
-        jFrame3.setSize(new java.awt.Dimension(800, 500));
+        fSotano3.setSize(new java.awt.Dimension(800, 500));
 
-        jLabel11.setText("Sotano 3");
+        lSotano3titulo.setText("Sotano 3");
 
         Parqueo301.setText("jButton14");
         Parqueo301.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -296,20 +296,10 @@ public class proyecto extends javax.swing.JFrame {
 
         Parqueo303.setText("Parqueo302");
         Parqueo303.setToolTipText("");
-        Parqueo303.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Parqueo303ActionPerformed(evt);
-            }
-        });
 
         Parqueo305.setText("jButton14");
 
         Parqueo307.setText("jButton17");
-        Parqueo307.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Parqueo307ActionPerformed(evt);
-            }
-        });
 
         Parqueo309.setText("jButton18");
 
@@ -329,21 +319,26 @@ public class proyecto extends javax.swing.JFrame {
 
         Parqueo314.setText("jButton22");
 
-        jButton14.setText("jButton14");
+        bSotano3regresar.setText("Regresar");
+        bSotano3regresar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                bSotano3regresarMouseClicked(evt);
+            }
+        });
 
         jButton17.setText("jButton17");
 
-        javax.swing.GroupLayout jFrame3Layout = new javax.swing.GroupLayout(jFrame3.getContentPane());
-        jFrame3.getContentPane().setLayout(jFrame3Layout);
-        jFrame3Layout.setHorizontalGroup(
-            jFrame3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jFrame3Layout.createSequentialGroup()
+        javax.swing.GroupLayout fSotano3Layout = new javax.swing.GroupLayout(fSotano3.getContentPane());
+        fSotano3.getContentPane().setLayout(fSotano3Layout);
+        fSotano3Layout.setHorizontalGroup(
+            fSotano3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(fSotano3Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel11)
+                .addComponent(lSotano3titulo)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jFrame3Layout.createSequentialGroup()
-                .addGroup(jFrame3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jFrame3Layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, fSotano3Layout.createSequentialGroup()
+                .addGroup(fSotano3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(fSotano3Layout.createSequentialGroup()
                         .addGap(108, 108, 108)
                         .addComponent(Parqueo301, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(64, 64, 64)
@@ -356,14 +351,14 @@ public class proyecto extends javax.swing.JFrame {
                         .addComponent(Parqueo309, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(66, 66, 66)
                         .addComponent(Parqueo311, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jFrame3Layout.createSequentialGroup()
-                        .addGroup(jFrame3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jFrame3Layout.createSequentialGroup()
+                    .addGroup(fSotano3Layout.createSequentialGroup()
+                        .addGroup(fSotano3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, fSotano3Layout.createSequentialGroup()
                                 .addGap(216, 216, 216)
-                                .addComponent(jButton14, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(bSotano3regresar, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(146, 146, 146)
                                 .addComponent(jButton17, javax.swing.GroupLayout.PREFERRED_SIZE, 100, Short.MAX_VALUE))
-                            .addGroup(jFrame3Layout.createSequentialGroup()
+                            .addGroup(fSotano3Layout.createSequentialGroup()
                                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(Parqueo302, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(53, 53, 53)
@@ -380,15 +375,15 @@ public class proyecto extends javax.swing.JFrame {
                         .addComponent(Parqueo314, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(21, 21, 21))
         );
-        jFrame3Layout.setVerticalGroup(
-            jFrame3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jFrame3Layout.createSequentialGroup()
+        fSotano3Layout.setVerticalGroup(
+            fSotano3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(fSotano3Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel11)
-                .addGroup(jFrame3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jFrame3Layout.createSequentialGroup()
+                .addComponent(lSotano3titulo)
+                .addGroup(fSotano3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(fSotano3Layout.createSequentialGroup()
                         .addGap(42, 42, 42)
-                        .addGroup(jFrame3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addGroup(fSotano3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(Parqueo303, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(Parqueo305, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(Parqueo307, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -396,7 +391,7 @@ public class proyecto extends javax.swing.JFrame {
                             .addComponent(Parqueo311, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(Parqueo301, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(90, 90, 90)
-                        .addGroup(jFrame3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addGroup(fSotano3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(Parqueo314, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(Parqueo310, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(Parqueo312, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -405,110 +400,125 @@ public class proyecto extends javax.swing.JFrame {
                             .addComponent(Parqueo304, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(Parqueo302, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(39, 104, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jFrame3Layout.createSequentialGroup()
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, fSotano3Layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(jFrame3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addGroup(fSotano3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                             .addComponent(jButton17, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jButton14, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(bSotano3regresar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addContainerGap())))
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jButton1.setToolTipText("");
-        jButton1.setLabel("Sotano 1");
+        bSotano1ir.setToolTipText("");
+        bSotano1ir.setLabel("Sotano 1");
+        bSotano1ir.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                bSotano1irMouseClicked(evt);
+            }
+        });
 
-        jButton2.setLabel("Sotano 2");
+        bSotano2ir.setLabel("Sotano 2");
+        bSotano2ir.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                bSotano2irMouseClicked(evt);
+            }
+        });
 
-        jButton3.setLabel("Sotano 3");
+        bSotano3ir.setLabel("Sotano 3");
+        bSotano3ir.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                bSotano3irMouseClicked(evt);
+            }
+        });
 
-        jLabel1.setBackground(new java.awt.Color(0, 255, 0));
-        jLabel1.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel1.setText("0");
-        jLabel1.setToolTipText("");
-        jLabel1.setMaximumSize(new java.awt.Dimension(25, 17));
-        jLabel1.setMinimumSize(new java.awt.Dimension(25, 17));
-        jLabel1.setName(""); // NOI18N
-        jLabel1.setOpaque(true);
-        jLabel1.setPreferredSize(new java.awt.Dimension(25, 17));
+        lSotano1Libre.setBackground(new java.awt.Color(0, 255, 0));
+        lSotano1Libre.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        lSotano1Libre.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        lSotano1Libre.setText("0");
+        lSotano1Libre.setToolTipText("");
+        lSotano1Libre.setMaximumSize(new java.awt.Dimension(25, 17));
+        lSotano1Libre.setMinimumSize(new java.awt.Dimension(25, 17));
+        lSotano1Libre.setName(""); // NOI18N
+        lSotano1Libre.setOpaque(true);
+        lSotano1Libre.setPreferredSize(new java.awt.Dimension(25, 17));
 
-        jLabel2.setBackground(new java.awt.Color(255, 0, 0));
-        jLabel2.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel2.setText("0");
-        jLabel2.setToolTipText("");
-        jLabel2.setMaximumSize(new java.awt.Dimension(25, 17));
-        jLabel2.setMinimumSize(new java.awt.Dimension(25, 17));
-        jLabel2.setName(""); // NOI18N
-        jLabel2.setOpaque(true);
-        jLabel2.setPreferredSize(new java.awt.Dimension(25, 17));
+        lSotano1ocupado.setBackground(new java.awt.Color(255, 0, 0));
+        lSotano1ocupado.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        lSotano1ocupado.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        lSotano1ocupado.setText("0");
+        lSotano1ocupado.setToolTipText("");
+        lSotano1ocupado.setMaximumSize(new java.awt.Dimension(25, 17));
+        lSotano1ocupado.setMinimumSize(new java.awt.Dimension(25, 17));
+        lSotano1ocupado.setName(""); // NOI18N
+        lSotano1ocupado.setOpaque(true);
+        lSotano1ocupado.setPreferredSize(new java.awt.Dimension(25, 17));
 
-        jLabel3.setBackground(new java.awt.Color(0, 255, 0));
-        jLabel3.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel3.setText("0");
-        jLabel3.setToolTipText("");
-        jLabel3.setMaximumSize(new java.awt.Dimension(25, 17));
-        jLabel3.setMinimumSize(new java.awt.Dimension(25, 17));
-        jLabel3.setName(""); // NOI18N
-        jLabel3.setOpaque(true);
-        jLabel3.setPreferredSize(new java.awt.Dimension(25, 17));
+        lSotano2libre.setBackground(new java.awt.Color(0, 255, 0));
+        lSotano2libre.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        lSotano2libre.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        lSotano2libre.setText("0");
+        lSotano2libre.setToolTipText("");
+        lSotano2libre.setMaximumSize(new java.awt.Dimension(25, 17));
+        lSotano2libre.setMinimumSize(new java.awt.Dimension(25, 17));
+        lSotano2libre.setName(""); // NOI18N
+        lSotano2libre.setOpaque(true);
+        lSotano2libre.setPreferredSize(new java.awt.Dimension(25, 17));
 
-        jLabel4.setBackground(new java.awt.Color(255, 0, 0));
-        jLabel4.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel4.setText("0");
-        jLabel4.setToolTipText("");
-        jLabel4.setMaximumSize(new java.awt.Dimension(25, 17));
-        jLabel4.setMinimumSize(new java.awt.Dimension(25, 17));
-        jLabel4.setName(""); // NOI18N
-        jLabel4.setOpaque(true);
-        jLabel4.setPreferredSize(new java.awt.Dimension(25, 17));
+        lSotano2ocupado.setBackground(new java.awt.Color(255, 0, 0));
+        lSotano2ocupado.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        lSotano2ocupado.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        lSotano2ocupado.setText("0");
+        lSotano2ocupado.setToolTipText("");
+        lSotano2ocupado.setMaximumSize(new java.awt.Dimension(25, 17));
+        lSotano2ocupado.setMinimumSize(new java.awt.Dimension(25, 17));
+        lSotano2ocupado.setName(""); // NOI18N
+        lSotano2ocupado.setOpaque(true);
+        lSotano2ocupado.setPreferredSize(new java.awt.Dimension(25, 17));
 
-        jLabel5.setBackground(new java.awt.Color(0, 255, 0));
-        jLabel5.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel5.setText("0");
-        jLabel5.setToolTipText("");
-        jLabel5.setMaximumSize(new java.awt.Dimension(25, 17));
-        jLabel5.setMinimumSize(new java.awt.Dimension(25, 17));
-        jLabel5.setName(""); // NOI18N
-        jLabel5.setOpaque(true);
-        jLabel5.setPreferredSize(new java.awt.Dimension(25, 17));
+        lSotano3libre.setBackground(new java.awt.Color(0, 255, 0));
+        lSotano3libre.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        lSotano3libre.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        lSotano3libre.setText("0");
+        lSotano3libre.setToolTipText("");
+        lSotano3libre.setMaximumSize(new java.awt.Dimension(25, 17));
+        lSotano3libre.setMinimumSize(new java.awt.Dimension(25, 17));
+        lSotano3libre.setName(""); // NOI18N
+        lSotano3libre.setOpaque(true);
+        lSotano3libre.setPreferredSize(new java.awt.Dimension(25, 17));
 
-        jLabel6.setBackground(new java.awt.Color(255, 0, 0));
-        jLabel6.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel6.setText("0");
-        jLabel6.setToolTipText("");
-        jLabel6.setMaximumSize(new java.awt.Dimension(25, 17));
-        jLabel6.setMinimumSize(new java.awt.Dimension(25, 17));
-        jLabel6.setName(""); // NOI18N
-        jLabel6.setOpaque(true);
-        jLabel6.setPreferredSize(new java.awt.Dimension(25, 17));
+        lSotano3ocupado.setBackground(new java.awt.Color(255, 0, 0));
+        lSotano3ocupado.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        lSotano3ocupado.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        lSotano3ocupado.setText("0");
+        lSotano3ocupado.setToolTipText("");
+        lSotano3ocupado.setMaximumSize(new java.awt.Dimension(25, 17));
+        lSotano3ocupado.setMinimumSize(new java.awt.Dimension(25, 17));
+        lSotano3ocupado.setName(""); // NOI18N
+        lSotano3ocupado.setOpaque(true);
+        lSotano3ocupado.setPreferredSize(new java.awt.Dimension(25, 17));
 
-        jLabel7.setBackground(new java.awt.Color(0, 255, 0));
-        jLabel7.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel7.setText("0");
-        jLabel7.setToolTipText("");
-        jLabel7.setMaximumSize(new java.awt.Dimension(25, 17));
-        jLabel7.setMinimumSize(new java.awt.Dimension(25, 17));
-        jLabel7.setName(""); // NOI18N
-        jLabel7.setOpaque(true);
-        jLabel7.setPreferredSize(new java.awt.Dimension(25, 17));
+        lTotalLibre.setBackground(new java.awt.Color(0, 255, 0));
+        lTotalLibre.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        lTotalLibre.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        lTotalLibre.setText("0");
+        lTotalLibre.setToolTipText("");
+        lTotalLibre.setMaximumSize(new java.awt.Dimension(25, 17));
+        lTotalLibre.setMinimumSize(new java.awt.Dimension(25, 17));
+        lTotalLibre.setName(""); // NOI18N
+        lTotalLibre.setOpaque(true);
+        lTotalLibre.setPreferredSize(new java.awt.Dimension(25, 17));
 
-        jLabel8.setBackground(new java.awt.Color(255, 0, 0));
-        jLabel8.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel8.setText("0");
-        jLabel8.setToolTipText("");
-        jLabel8.setMaximumSize(new java.awt.Dimension(25, 17));
-        jLabel8.setMinimumSize(new java.awt.Dimension(25, 17));
-        jLabel8.setName(""); // NOI18N
-        jLabel8.setOpaque(true);
-        jLabel8.setPreferredSize(new java.awt.Dimension(25, 17));
+        lTotalOcupado.setBackground(new java.awt.Color(255, 0, 0));
+        lTotalOcupado.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        lTotalOcupado.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        lTotalOcupado.setText("0");
+        lTotalOcupado.setToolTipText("");
+        lTotalOcupado.setMaximumSize(new java.awt.Dimension(25, 17));
+        lTotalOcupado.setMinimumSize(new java.awt.Dimension(25, 17));
+        lTotalOcupado.setName(""); // NOI18N
+        lTotalOcupado.setOpaque(true);
+        lTotalOcupado.setPreferredSize(new java.awt.Dimension(25, 17));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -517,27 +527,27 @@ public class proyecto extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(90, 90, 90)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton1)
-                    .addComponent(jButton2)
-                    .addComponent(jButton3))
+                    .addComponent(bSotano1ir)
+                    .addComponent(bSotano2ir)
+                    .addComponent(bSotano3ir))
                 .addGap(45, 45, 45)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(lTotalLibre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(lTotalOcupado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(lSotano3libre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(lSotano3ocupado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(lSotano2libre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(lSotano2ocupado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(lSotano1Libre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(lSotano1ocupado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(100, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -545,23 +555,23 @@ public class proyecto extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(77, 77, 77)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(bSotano1ir)
+                    .addComponent(lSotano1Libre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lSotano1ocupado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton2)
-                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(bSotano2ir)
+                    .addComponent(lSotano2libre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lSotano2ocupado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton3)
-                    .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(bSotano3ir)
+                    .addComponent(lSotano3libre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lSotano3ocupado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(lTotalLibre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lTotalOcupado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(77, Short.MAX_VALUE))
         );
 
@@ -576,18 +586,30 @@ public class proyecto extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton8ActionPerformed
 
-    private void Parqueo303ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Parqueo303ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Parqueo303ActionPerformed
-
-    private void Parqueo307ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Parqueo307ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Parqueo307ActionPerformed
-
     private void Parqueo301MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Parqueo301MouseClicked
 
 
     }//GEN-LAST:event_Parqueo301MouseClicked
+
+    private void bSotano1irMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bSotano1irMouseClicked
+        this.setVisible(false);
+        fSotano1.setVisible(true);
+    }//GEN-LAST:event_bSotano1irMouseClicked
+
+    private void bSotano2irMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bSotano2irMouseClicked
+        this.setVisible(false);
+        fSotano2.setVisible(true);
+    }//GEN-LAST:event_bSotano2irMouseClicked
+
+    private void bSotano3irMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bSotano3irMouseClicked
+        this.setVisible(false);
+        fSotano3.setVisible(true);
+    }//GEN-LAST:event_bSotano3irMouseClicked
+
+    private void bSotano3regresarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bSotano3regresarMouseClicked
+        fSotano3.setVisible(false);
+        this.setVisible(true);
+    }//GEN-LAST:event_bSotano3regresarMouseClicked
 
     /**
      * @param args the command line arguments
@@ -638,36 +660,36 @@ public class proyecto extends javax.swing.JFrame {
     private javax.swing.JButton Parqueo311;
     private javax.swing.JButton Parqueo312;
     private javax.swing.JButton Parqueo314;
+    private javax.swing.JButton bSotano1ir;
+    private javax.swing.JButton bSotano2ir;
+    private javax.swing.JButton bSotano3ir;
+    private javax.swing.JButton bSotano3regresar;
     private javax.swing.JFrame fSotano1;
     private javax.swing.JFrame fSotano2;
-    private javax.swing.JButton jButton1;
+    private javax.swing.JFrame fSotano3;
     private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton11;
     private javax.swing.JButton jButton12;
     private javax.swing.JButton jButton13;
-    private javax.swing.JButton jButton14;
     private javax.swing.JButton jButton15;
     private javax.swing.JButton jButton16;
     private javax.swing.JButton jButton17;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
     private javax.swing.JButton jButton9;
-    private javax.swing.JFrame jFrame3;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
+    private javax.swing.JLabel lSotano1Libre;
+    private javax.swing.JLabel lSotano1ocupado;
+    private javax.swing.JLabel lSotano1titulo;
+    private javax.swing.JLabel lSotano2libre;
+    private javax.swing.JLabel lSotano2ocupado;
+    private javax.swing.JLabel lSotano2titulo;
+    private javax.swing.JLabel lSotano3libre;
+    private javax.swing.JLabel lSotano3ocupado;
+    private javax.swing.JLabel lSotano3titulo;
+    private javax.swing.JLabel lTotalLibre;
+    private javax.swing.JLabel lTotalOcupado;
     // End of variables declaration//GEN-END:variables
 }
