@@ -47,13 +47,14 @@ public class proyecto extends javax.swing.JFrame {
     }
 
     private void marcarParqueos() {
-        this.Parqueo301.setBackground(this.sotano3[1].libre() == 1?Color.GREEN:Color.RED);
+        this.Parqueo301.setBackground(this.sotano3[0].libre() == 1?Color.GREEN:Color.RED);
     }
 
    private void contarParqueos () {
-        int libre  = 0;
+        int libre;
         int libres = 0;
 
+        libre = 0;
         for(int i = 0 ; i < this.sotano1.length; i++) {
             libre+= this.sotano1[i].libre();
         }
@@ -81,10 +82,11 @@ public class proyecto extends javax.swing.JFrame {
         lTotalOcupado.setText(Integer.toString(this.sotano1.length+this.sotano2.length+this.sotano3.length-libres));
     }
 
-    private void accionParqueo(Parqueo parqueo){
+    private Parqueo accionParqueo(Parqueo parqueo){
         if( parqueo.libre() == 1){
             if(JOptionPane.showConfirmDialog (null,"¿Desea asignar este parqueo?",null,JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION){
                 parqueo.marcarEntrada();
+                JOptionPane.showMessageDialog(rootPane, "Se ha marcado un ingreso");
             }
         } else {
             if(JOptionPane.showConfirmDialog (null,"¿Desea pagar este parqueo?",null,JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION){
@@ -93,9 +95,7 @@ public class proyecto extends javax.swing.JFrame {
                 parqueo.limpiar();
             }
         }
-        this.contarParqueos();
-        this.marcarParqueos();
-
+        return parqueo;
     }
 
     /**
@@ -168,19 +168,9 @@ public class proyecto extends javax.swing.JFrame {
 
         jButton8.setText("jButton8");
         jButton8.setPreferredSize(new java.awt.Dimension(50, 75));
-        jButton8.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton8ActionPerformed(evt);
-            }
-        });
 
         jButton9.setText("jButton9");
         jButton9.setPreferredSize(new java.awt.Dimension(50, 75));
-        jButton9.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton9ActionPerformed(evt);
-            }
-        });
 
         jButton10.setText("jButton10");
         jButton10.setPreferredSize(new java.awt.Dimension(50, 75));
@@ -287,7 +277,7 @@ public class proyecto extends javax.swing.JFrame {
 
         lSotano3titulo.setText("Sotano 3");
 
-        Parqueo301.setText("jButton14");
+        Parqueo301.setText("01");
         Parqueo301.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 Parqueo301MouseClicked(evt);
@@ -578,17 +568,9 @@ public class proyecto extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton9ActionPerformed
-
-    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton8ActionPerformed
-
     private void Parqueo301MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Parqueo301MouseClicked
-
-
+        this.sotano3[0] = this.accionParqueo(this.sotano3[0]);
+        this.marcarParqueos();
     }//GEN-LAST:event_Parqueo301MouseClicked
 
     private void bSotano1irMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bSotano1irMouseClicked
@@ -609,6 +591,7 @@ public class proyecto extends javax.swing.JFrame {
     private void bSotano3regresarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bSotano3regresarMouseClicked
         fSotano3.setVisible(false);
         this.setVisible(true);
+        this.contarParqueos();
     }//GEN-LAST:event_bSotano3regresarMouseClicked
 
     /**

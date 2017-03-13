@@ -128,9 +128,6 @@
               <Dimension value="[50, 75]"/>
             </Property>
           </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton8ActionPerformed"/>
-          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="jButton9">
           <Properties>
@@ -139,9 +136,6 @@
               <Dimension value="[50, 75]"/>
             </Property>
           </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton9ActionPerformed"/>
-          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="jButton10">
           <Properties>
@@ -334,7 +328,7 @@
         </Component>
         <Component class="javax.swing.JButton" name="Parqueo301">
           <Properties>
-            <Property name="text" type="java.lang.String" value="jButton14"/>
+            <Property name="text" type="java.lang.String" value="01"/>
           </Properties>
           <Events>
             <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="Parqueo301MouseClicked"/>
