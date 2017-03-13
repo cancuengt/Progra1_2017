@@ -14,11 +14,12 @@ import java.util.Date;
  */
 public class Parqueo {
 
-    public int sotano;
-    public int numero;
-    public long entrada;
-    public long salida;
+    private int sotano;
+    private int numero;
+    private long entrada;
+    private long salida;
     public long cobro;
+
 
     /**
      * Constructor. Inicializa la caja de parqueo
@@ -30,15 +31,31 @@ public class Parqueo {
         this.numero  = numero;
         this.entrada = 0;
         this.salida  = 0;
-        this.cobro   = 0;
+        this.cobro   = 10;
+    }
+
+    public long calcularTiempo(){
+        return (this.salida - this.entrada)/1000;
+    }
+
+    public void marcarEntrada(){
+        this.entrada = new Date().getTime();
+    }
+
+    public void marcarSalida(){
+        this.salida = new Date().getTime();
     }
 
     /**
      * Retorna 1 si la caja de parqueo está libre
      * @return int
      */
-    int libre() {
+    public int libre() {
         return (this.entrada == 0) ? 1 : 0;
     }
 
+    public void limpiar(){
+        this.entrada = 0;
+        this.salida  = 0;
+    }
 }

@@ -7,7 +7,9 @@ package proyecto;
 
 
 //import java.util.Timer;
+import java.awt.Color;
 import java.awt.event.ActionListener;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -40,10 +42,15 @@ public class proyecto extends javax.swing.JFrame {
             this.sotano3[i] = new Parqueo(3,i);
         }
 
-        this.ocupados();
+        this.contarParqueos();
+        this.marcarParqueos();
     }
 
-   private void ocupados () {
+    private void marcarParqueos() {
+        this.Parqueo301.setBackground(this.sotano3[1].libre() == 1?Color.GREEN:Color.RED);
+    }
+
+   private void contarParqueos () {
         int libre  = 0;
         int libres = 0;
 
@@ -74,7 +81,22 @@ public class proyecto extends javax.swing.JFrame {
         jLabel8.setText(Integer.toString(this.sotano1.length+this.sotano2.length+this.sotano3.length-libres));
     }
 
+    private void accionParqueo(Parqueo parqueo){
+        if( parqueo.libre() == 1){
+            if(JOptionPane.showConfirmDialog (null,"¿Desea asignar este parqueo?",null,JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION){
+                parqueo.marcarEntrada();
+            }
+        } else {
+            if(JOptionPane.showConfirmDialog (null,"¿Desea pagar este parqueo?",null,JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION){
+                parqueo.marcarSalida();
+                JOptionPane.showMessageDialog(rootPane, "Tiempo: "+parqueo.calcularTiempo());
+                parqueo.limpiar();
+            }
+        }
+        this.contarParqueos();
+        this.marcarParqueos();
 
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -101,7 +123,7 @@ public class proyecto extends javax.swing.JFrame {
         jButton16 = new javax.swing.JButton();
         fSotano2 = new javax.swing.JFrame();
         jLabel10 = new javax.swing.JLabel();
-        fSotano3 = new javax.swing.JFrame();
+        jFrame3 = new javax.swing.JFrame();
         jLabel11 = new javax.swing.JLabel();
         Parqueo301 = new javax.swing.JButton();
         Parqueo303 = new javax.swing.JButton();
@@ -261,14 +283,14 @@ public class proyecto extends javax.swing.JFrame {
                 .addContainerGap(273, Short.MAX_VALUE))
         );
 
-        fSotano3.setSize(new java.awt.Dimension(800, 500));
+        jFrame3.setSize(new java.awt.Dimension(800, 500));
 
         jLabel11.setText("Sotano 3");
 
         Parqueo301.setText("jButton14");
-        Parqueo301.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Parqueo301ActionPerformed(evt);
+        Parqueo301.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Parqueo301MouseClicked(evt);
             }
         });
 
@@ -311,17 +333,17 @@ public class proyecto extends javax.swing.JFrame {
 
         jButton17.setText("jButton17");
 
-        javax.swing.GroupLayout fSotano3Layout = new javax.swing.GroupLayout(fSotano3.getContentPane());
-        fSotano3.getContentPane().setLayout(fSotano3Layout);
-        fSotano3Layout.setHorizontalGroup(
-            fSotano3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(fSotano3Layout.createSequentialGroup()
+        javax.swing.GroupLayout jFrame3Layout = new javax.swing.GroupLayout(jFrame3.getContentPane());
+        jFrame3.getContentPane().setLayout(jFrame3Layout);
+        jFrame3Layout.setHorizontalGroup(
+            jFrame3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jFrame3Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel11)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, fSotano3Layout.createSequentialGroup()
-                .addGroup(fSotano3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(fSotano3Layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jFrame3Layout.createSequentialGroup()
+                .addGroup(jFrame3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jFrame3Layout.createSequentialGroup()
                         .addGap(108, 108, 108)
                         .addComponent(Parqueo301, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(64, 64, 64)
@@ -334,14 +356,14 @@ public class proyecto extends javax.swing.JFrame {
                         .addComponent(Parqueo309, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(66, 66, 66)
                         .addComponent(Parqueo311, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(fSotano3Layout.createSequentialGroup()
-                        .addGroup(fSotano3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, fSotano3Layout.createSequentialGroup()
+                    .addGroup(jFrame3Layout.createSequentialGroup()
+                        .addGroup(jFrame3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jFrame3Layout.createSequentialGroup()
                                 .addGap(216, 216, 216)
                                 .addComponent(jButton14, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(146, 146, 146)
                                 .addComponent(jButton17, javax.swing.GroupLayout.PREFERRED_SIZE, 100, Short.MAX_VALUE))
-                            .addGroup(fSotano3Layout.createSequentialGroup()
+                            .addGroup(jFrame3Layout.createSequentialGroup()
                                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(Parqueo302, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(53, 53, 53)
@@ -358,15 +380,15 @@ public class proyecto extends javax.swing.JFrame {
                         .addComponent(Parqueo314, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(21, 21, 21))
         );
-        fSotano3Layout.setVerticalGroup(
-            fSotano3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(fSotano3Layout.createSequentialGroup()
+        jFrame3Layout.setVerticalGroup(
+            jFrame3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jFrame3Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel11)
-                .addGroup(fSotano3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(fSotano3Layout.createSequentialGroup()
+                .addGroup(jFrame3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jFrame3Layout.createSequentialGroup()
                         .addGap(42, 42, 42)
-                        .addGroup(fSotano3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addGroup(jFrame3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(Parqueo303, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(Parqueo305, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(Parqueo307, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -374,7 +396,7 @@ public class proyecto extends javax.swing.JFrame {
                             .addComponent(Parqueo311, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(Parqueo301, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(90, 90, 90)
-                        .addGroup(fSotano3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addGroup(jFrame3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(Parqueo314, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(Parqueo310, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(Parqueo312, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -383,9 +405,9 @@ public class proyecto extends javax.swing.JFrame {
                             .addComponent(Parqueo304, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(Parqueo302, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(39, 104, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, fSotano3Layout.createSequentialGroup()
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jFrame3Layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(fSotano3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addGroup(jFrame3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                             .addComponent(jButton17, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jButton14, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addContainerGap())))
@@ -554,10 +576,6 @@ public class proyecto extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton8ActionPerformed
 
-    private void Parqueo301ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Parqueo301ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Parqueo301ActionPerformed
-
     private void Parqueo303ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Parqueo303ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_Parqueo303ActionPerformed
@@ -565,6 +583,11 @@ public class proyecto extends javax.swing.JFrame {
     private void Parqueo307ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Parqueo307ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_Parqueo307ActionPerformed
+
+    private void Parqueo301MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Parqueo301MouseClicked
+
+
+    }//GEN-LAST:event_Parqueo301MouseClicked
 
     /**
      * @param args the command line arguments
@@ -617,7 +640,6 @@ public class proyecto extends javax.swing.JFrame {
     private javax.swing.JButton Parqueo314;
     private javax.swing.JFrame fSotano1;
     private javax.swing.JFrame fSotano2;
-    private javax.swing.JFrame fSotano3;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton11;
@@ -635,6 +657,7 @@ public class proyecto extends javax.swing.JFrame {
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
     private javax.swing.JButton jButton9;
+    private javax.swing.JFrame jFrame3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
