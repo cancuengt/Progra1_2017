@@ -133,6 +133,18 @@ public class proyecto extends javax.swing.JFrame {
         jButton16 = new javax.swing.JButton();
         fSotano2 = new javax.swing.JFrame();
         lSotano2titulo = new javax.swing.JLabel();
+        Parqueo201 = new javax.swing.JButton();
+        Parqueo206 = new javax.swing.JButton();
+        Parqueo207 = new javax.swing.JButton();
+        Parqueo202 = new javax.swing.JButton();
+        Parqueo208 = new javax.swing.JButton();
+        Parqueo203 = new javax.swing.JButton();
+        Parqueo204 = new javax.swing.JButton();
+        jButton21 = new javax.swing.JButton();
+        Parqueo209 = new javax.swing.JButton();
+        Parqueo205 = new javax.swing.JButton();
+        jButton24 = new javax.swing.JButton();
+        bSotano2regresar = new javax.swing.JButton();
         fSotano3 = new javax.swing.JFrame();
         lSotano3titulo = new javax.swing.JLabel();
         Parqueo301 = new javax.swing.JButton();
@@ -268,7 +280,33 @@ public class proyecto extends javax.swing.JFrame {
                 .addGap(33, 33, 33))
         );
 
+        fSotano2.setSize(new java.awt.Dimension(800, 500));
+
         lSotano2titulo.setText("Sotano 2");
+
+        Parqueo201.setText("01");
+
+        Parqueo206.setText("06");
+
+        Parqueo207.setText("07");
+
+        Parqueo202.setText("02");
+
+        Parqueo208.setText("08");
+
+        Parqueo203.setText("03");
+
+        Parqueo204.setText("04");
+
+        jButton21.setText("jButton1");
+
+        Parqueo209.setText("09");
+
+        Parqueo205.setText("05");
+
+        jButton24.setText("Regresar");
+
+        bSotano2regresar.setText("Regresar");
 
         javax.swing.GroupLayout fSotano2Layout = new javax.swing.GroupLayout(fSotano2.getContentPane());
         fSotano2.getContentPane().setLayout(fSotano2Layout);
@@ -277,14 +315,67 @@ public class proyecto extends javax.swing.JFrame {
             .addGroup(fSotano2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(lSotano2titulo)
-                .addContainerGap(325, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(fSotano2Layout.createSequentialGroup()
+                .addGap(93, 93, 93)
+                .addGroup(fSotano2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(fSotano2Layout.createSequentialGroup()
+                        .addGroup(fSotano2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(Parqueo201, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Parqueo206, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(50, 50, 50)
+                        .addGroup(fSotano2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(Parqueo207, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Parqueo202, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(45, 45, 45)
+                        .addGroup(fSotano2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(Parqueo208, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Parqueo203, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(bSotano2regresar, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(43, 43, 43)
+                .addGroup(fSotano2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(fSotano2Layout.createSequentialGroup()
+                        .addComponent(jButton24, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(fSotano2Layout.createSequentialGroup()
+                        .addGroup(fSotano2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(Parqueo209, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(fSotano2Layout.createSequentialGroup()
+                                .addGroup(fSotano2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(Parqueo204, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jButton21, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(39, 39, 39)
+                                .addComponent(Parqueo205, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addContainerGap(13, Short.MAX_VALUE))))
         );
         fSotano2Layout.setVerticalGroup(
             fSotano2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(fSotano2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(lSotano2titulo)
-                .addContainerGap(273, Short.MAX_VALUE))
+                .addGap(31, 31, 31)
+                .addGroup(fSotano2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(fSotano2Layout.createSequentialGroup()
+                        .addComponent(Parqueo201, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(28, 28, 28)
+                        .addComponent(Parqueo206, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(fSotano2Layout.createSequentialGroup()
+                        .addComponent(Parqueo202, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(28, 28, 28)
+                        .addGroup(fSotano2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(Parqueo207, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Parqueo208, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Parqueo209, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(Parqueo204, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(fSotano2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(Parqueo203, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jButton21, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(Parqueo205, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 105, Short.MAX_VALUE)
+                .addGroup(fSotano2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(bSotano2regresar, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton24, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(71, 71, 71))
         );
 
         fSotano3.setSize(new java.awt.Dimension(800, 500));
@@ -361,7 +452,7 @@ public class proyecto extends javax.swing.JFrame {
                                 .addGap(216, 216, 216)
                                 .addComponent(bSotano3regresar, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(146, 146, 146)
-                                .addComponent(jButton17, javax.swing.GroupLayout.PREFERRED_SIZE, 100, Short.MAX_VALUE))
+                                .addComponent(jButton17, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE))
                             .addGroup(fSotano3Layout.createSequentialGroup()
                                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(Parqueo302, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -412,7 +503,6 @@ public class proyecto extends javax.swing.JFrame {
                         .addContainerGap())))
         );
 
-        dTicket.setMaximumSize(new java.awt.Dimension(400, 300));
         dTicket.setMinimumSize(new java.awt.Dimension(400, 300));
         dTicket.setResizable(false);
         dTicket.setSize(new java.awt.Dimension(400, 300));
@@ -691,6 +781,15 @@ public class proyecto extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Parqueo201;
+    private javax.swing.JButton Parqueo202;
+    private javax.swing.JButton Parqueo203;
+    private javax.swing.JButton Parqueo204;
+    private javax.swing.JButton Parqueo205;
+    private javax.swing.JButton Parqueo206;
+    private javax.swing.JButton Parqueo207;
+    private javax.swing.JButton Parqueo208;
+    private javax.swing.JButton Parqueo209;
     private javax.swing.JButton Parqueo301;
     private javax.swing.JButton Parqueo302;
     private javax.swing.JButton Parqueo303;
@@ -707,6 +806,7 @@ public class proyecto extends javax.swing.JFrame {
     private javax.swing.JButton bCerrarTicket;
     private javax.swing.JButton bSotano1ir;
     private javax.swing.JButton bSotano2ir;
+    private javax.swing.JButton bSotano2regresar;
     private javax.swing.JButton bSotano3ir;
     private javax.swing.JButton bSotano3regresar;
     private javax.swing.JDialog dTicket;
@@ -720,6 +820,8 @@ public class proyecto extends javax.swing.JFrame {
     private javax.swing.JButton jButton15;
     private javax.swing.JButton jButton16;
     private javax.swing.JButton jButton17;
+    private javax.swing.JButton jButton21;
+    private javax.swing.JButton jButton24;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
