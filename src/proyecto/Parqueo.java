@@ -19,7 +19,7 @@ public class Parqueo {
     private long entrada;
     private long salida;
     public long cobro;
-
+    private long fraccion;
 
     /**
      * Constructor. Inicializa la caja de parqueo
@@ -27,15 +27,23 @@ public class Parqueo {
      * @param numero Número de parqueo en el sótano
      */
     public Parqueo(int sotano,int numero) {
-        this.sotano  = sotano;
-        this.numero  = numero;
-        this.entrada = 0;
-        this.salida  = 0;
-        this.cobro   = 10;
+        this.sotano   = sotano;
+        this.numero   = numero;
+        this.entrada  = 0;
+        this.salida   = 0;
+        this.cobro    = 10;
+        //this.fraccion = 30*60; // Media hora
+        this.fraccion = 10; // Pruebas
     }
 
     public long calcularTiempo(){
-        return (this.salida - this.entrada)/1000;
+        long segundos   = ((this.salida - this.entrada)/1000);
+        long fracciones = (long) Math.ceil((double) segundos / (double) this.fraccion);
+        return fracciones;
+    }
+
+    public float calcularCobro(long tarifa){
+        return ((float) this.calcularTiempo()) * ((float) tarifa);
     }
 
     public void marcarEntrada(){
