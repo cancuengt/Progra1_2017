@@ -8,7 +8,6 @@ package proyecto;
 
 //import java.util.Timer;
 import java.awt.Color;
-import java.awt.event.ActionListener;
 import javax.swing.JOptionPane;
 
 /**
@@ -20,6 +19,7 @@ public class proyecto extends javax.swing.JFrame {
     public Parqueo[] sotano1;
     public Parqueo[] sotano2;
     public Parqueo[] sotano3;
+    public long tarifa;
 
     /**
      * Creates new form proyecto
@@ -33,17 +33,20 @@ public class proyecto extends javax.swing.JFrame {
         this.sotano3 = new Parqueo[11];
         int i;
         for(i=0; i < sotano1.length; i++){
-            this.sotano1[i] = new Parqueo(1,i);
+            this.sotano1[i] = new Parqueo(1,i+1);
         }
         for(i=0; i < sotano2.length; i++){
-            this.sotano2[i] = new Parqueo(2,i);
+            this.sotano2[i] = new Parqueo(2,i+1);
         }
         for(i=0; i < sotano3.length; i++){
-            this.sotano3[i] = new Parqueo(3,i);
+            this.sotano3[i] = new Parqueo(3,i+1);
         }
 
         this.contarParqueos();
         this.marcarParqueos();
+
+        // Tarifa por fracción definida en el
+        this.tarifa = 400; // Centavos (por redondeo)
     }
 
     private void marcarParqueos() {
@@ -86,12 +89,19 @@ public class proyecto extends javax.swing.JFrame {
         if( parqueo.libre() == 1){
             if(JOptionPane.showConfirmDialog (null,"¿Desea asignar este parqueo?",null,JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION){
                 parqueo.marcarEntrada();
-                JOptionPane.showMessageDialog(rootPane, "Se ha marcado un ingreso");
+                //JOptionPane.showMessageDialog(rootPane, "Se ha marcado un ingreso");
             }
         } else {
             if(JOptionPane.showConfirmDialog (null,"¿Desea pagar este parqueo?",null,JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION){
                 parqueo.marcarSalida();
-                JOptionPane.showMessageDialog(rootPane, "Tiempo: "+parqueo.calcularTiempo());
+
+                /**
+                 * @todo Crear texto para el ticket
+                 */
+                tTicketText.setText("Total a cancelar: "+Float.toString(parqueo.calcularCobro(this.tarifa)));
+
+                dTicket.setModal(true);
+                dTicket.setVisible(true);
                 parqueo.limpiar();
             }
         }
@@ -140,6 +150,10 @@ public class proyecto extends javax.swing.JFrame {
         Parqueo314 = new javax.swing.JButton();
         bSotano3regresar = new javax.swing.JButton();
         jButton17 = new javax.swing.JButton();
+        dTicket = new javax.swing.JDialog();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        tTicketText = new javax.swing.JTextArea();
+        bCerrarTicket = new javax.swing.JButton();
         bSotano1ir = new javax.swing.JButton();
         bSotano2ir = new javax.swing.JButton();
         bSotano3ir = new javax.swing.JButton();
@@ -398,6 +412,48 @@ public class proyecto extends javax.swing.JFrame {
                         .addContainerGap())))
         );
 
+        dTicket.setMaximumSize(new java.awt.Dimension(400, 300));
+        dTicket.setMinimumSize(new java.awt.Dimension(400, 300));
+        dTicket.setResizable(false);
+        dTicket.setSize(new java.awt.Dimension(400, 300));
+
+        tTicketText.setColumns(20);
+        tTicketText.setRows(5);
+        jScrollPane2.setViewportView(tTicketText);
+
+        bCerrarTicket.setText("Cerrar");
+        bCerrarTicket.setMaximumSize(new java.awt.Dimension(100, 25));
+        bCerrarTicket.setMinimumSize(new java.awt.Dimension(100, 25));
+        bCerrarTicket.setPreferredSize(new java.awt.Dimension(100, 25));
+        bCerrarTicket.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                bCerrarTicketMouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout dTicketLayout = new javax.swing.GroupLayout(dTicket.getContentPane());
+        dTicket.getContentPane().setLayout(dTicketLayout);
+        dTicketLayout.setHorizontalGroup(
+            dTicketLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(dTicketLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane2)
+                .addContainerGap())
+            .addGroup(dTicketLayout.createSequentialGroup()
+                .addGap(155, 155, 155)
+                .addComponent(bCerrarTicket, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(145, Short.MAX_VALUE))
+        );
+        dTicketLayout.setVerticalGroup(
+            dTicketLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(dTicketLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 245, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(bCerrarTicket, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         bSotano1ir.setToolTipText("");
@@ -594,6 +650,11 @@ public class proyecto extends javax.swing.JFrame {
         this.contarParqueos();
     }//GEN-LAST:event_bSotano3regresarMouseClicked
 
+    private void bCerrarTicketMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bCerrarTicketMouseClicked
+        dTicket.setModal(false);
+        dTicket.setVisible(false);
+    }//GEN-LAST:event_bCerrarTicketMouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -643,10 +704,12 @@ public class proyecto extends javax.swing.JFrame {
     private javax.swing.JButton Parqueo311;
     private javax.swing.JButton Parqueo312;
     private javax.swing.JButton Parqueo314;
+    private javax.swing.JButton bCerrarTicket;
     private javax.swing.JButton bSotano1ir;
     private javax.swing.JButton bSotano2ir;
     private javax.swing.JButton bSotano3ir;
     private javax.swing.JButton bSotano3regresar;
+    private javax.swing.JDialog dTicket;
     private javax.swing.JFrame fSotano1;
     private javax.swing.JFrame fSotano2;
     private javax.swing.JFrame fSotano3;
@@ -663,6 +726,7 @@ public class proyecto extends javax.swing.JFrame {
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
     private javax.swing.JButton jButton9;
+    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JLabel lSotano1Libre;
     private javax.swing.JLabel lSotano1ocupado;
     private javax.swing.JLabel lSotano1titulo;
@@ -674,5 +738,6 @@ public class proyecto extends javax.swing.JFrame {
     private javax.swing.JLabel lSotano3titulo;
     private javax.swing.JLabel lTotalLibre;
     private javax.swing.JLabel lTotalOcupado;
+    private javax.swing.JTextArea tTicketText;
     // End of variables declaration//GEN-END:variables
 }
