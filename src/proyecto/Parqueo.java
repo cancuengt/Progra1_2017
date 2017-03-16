@@ -5,6 +5,9 @@
  */
 package proyecto;
 
+import java.io.FileWriter;
+import java.io.BufferedWriter;
+import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.TimeZone;
@@ -56,8 +59,26 @@ public class Parqueo {
     }
 
     public long calcularTiempo(){
-        long segundos   = ((this.salida - this.entrada)/1000);
+        long segundos   = ((this.salida - this.entrada)/1000L);
         return segundos;
+    }
+
+    public void escribirArchivo(String nombreArchivo, long tarifa){
+        try {
+            BufferedWriter agendaArch  = new BufferedWriter(new FileWriter(nombreArchivo,true));
+            String cadena = "";
+            cadena += this.sotano+"|";
+            cadena += this.numero+"|";
+            cadena += this.entrada+"|";
+            cadena += this.salida+"|";
+            cadena += this.calcularTiempo()+"|";
+            cadena += String.format("%.2f",this.calcularCobro(tarifa)/100)+"\n";
+            agendaArch.write(cadena);
+            agendaArch.flush();
+            agendaArch.close();
+        } catch (IOException ex) {
+            // Do nothing
+        }
     }
 
     public long calcularFracciones(){

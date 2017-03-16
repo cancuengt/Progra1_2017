@@ -21,6 +21,7 @@ public class proyecto extends javax.swing.JFrame {
     public Parqueo[] sotano3;
     public long tarifa;
     public long fraccion;
+    public String archivo;
 
     /**
      * Creates new form proyecto
@@ -30,6 +31,7 @@ public class proyecto extends javax.swing.JFrame {
 
         this.tarifa   = 411; // Centavos (por redondeo)
         this.fraccion = 10;  // Segundos
+        this.archivo  = "registro.log";
 
         // Inicialización de parqueos
         this.sotano1 = new Parqueo[12];
@@ -91,23 +93,19 @@ public class proyecto extends javax.swing.JFrame {
         if( parqueo.libre() == 1){
             if(JOptionPane.showConfirmDialog (null,"¿Desea asignar este parqueo?",null,JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION){
                 parqueo.marcarEntrada();
-                //JOptionPane.showMessageDialog(rootPane, "Se ha marcado un ingreso");
             }
         } else {
             if(JOptionPane.showConfirmDialog (null,"¿Desea pagar este parqueo?",null,JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION){
                 parqueo.marcarSalida();
-
                 long tiempo = parqueo.calcularTiempo();
-
                 String texto = "Paraqueo El Descanso\n\n";
                 texto+="Hora de entrada: " + parqueo.getStingEntrada()+"\n";
                 texto+="Hora de salida:  " + parqueo.getStingSalida()+"\n";
                 texto+="Tiempo total:    " + parqueo.getStringTiempo(tiempo)+"\n";
                 texto+="Total a cancelar: Q "+ String.format("%.2f",parqueo.calcularCobro(this.tarifa)/100) +"\n";
-
+                parqueo.escribirArchivo(this.archivo,this.tarifa);
                 parqueo.limpiar();
                 tTicketText.setText(texto);
-
                 dTicket.setModal(true);
                 dTicket.setVisible(true);
             }
