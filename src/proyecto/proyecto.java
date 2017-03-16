@@ -20,6 +20,7 @@ public class proyecto extends javax.swing.JFrame {
     public Parqueo[] sotano2;
     public Parqueo[] sotano3;
     public long tarifa;
+    public long fraccion;
 
     /**
      * Creates new form proyecto
@@ -27,33 +28,34 @@ public class proyecto extends javax.swing.JFrame {
     public proyecto() {
         initComponents();
 
-        // Inicialización de propiedades
+        this.tarifa   = 411; // Centavos (por redondeo)
+        this.fraccion = 10;  // Segundos
+
+        // Inicialización de parqueos
         this.sotano1 = new Parqueo[12];
         this.sotano2 = new Parqueo[9];
         this.sotano3 = new Parqueo[11];
         int i;
         for(i=0; i < sotano1.length; i++){
-            this.sotano1[i] = new Parqueo(1,i+1);
+            this.sotano1[i] = new Parqueo(1,i+1,this.fraccion);
         }
         for(i=0; i < sotano2.length; i++){
-            this.sotano2[i] = new Parqueo(2,i+1);
+            this.sotano2[i] = new Parqueo(2,i+1,this.fraccion);
         }
         for(i=0; i < sotano3.length; i++){
-            this.sotano3[i] = new Parqueo(3,i+1);
+            this.sotano3[i] = new Parqueo(3,i+1,this.fraccion);
         }
 
+        // Marcajes iniciales
         this.contarParqueos();
         this.marcarParqueos();
-
-        // Tarifa por fracción definida en el
-        this.tarifa = 400; // Centavos (por redondeo)
     }
 
     private void marcarParqueos() {
         this.Parqueo301.setBackground(this.sotano3[0].libre() == 1?Color.GREEN:Color.RED);
     }
 
-   private void contarParqueos () {
+    private void contarParqueos () {
         int libre;
         int libres = 0;
 
@@ -95,14 +97,19 @@ public class proyecto extends javax.swing.JFrame {
             if(JOptionPane.showConfirmDialog (null,"¿Desea pagar este parqueo?",null,JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION){
                 parqueo.marcarSalida();
 
-                /**
-                 * @todo Crear texto para el ticket
-                 */
-                tTicketText.setText("Total a cancelar: "+Float.toString(parqueo.calcularCobro(this.tarifa)));
+                long tiempo = parqueo.calcularTiempo();
+
+                String texto = "Paraqueo El Descanso\n\n";
+                texto+="Hora de entrada: " + parqueo.getStingEntrada()+"\n";
+                texto+="Hora de salida:  " + parqueo.getStingSalida()+"\n";
+                texto+="Tiempo total:    " + parqueo.getStringTiempo(tiempo)+"\n";
+                texto+="Total a cancelar: Q "+ String.format("%.2f",parqueo.calcularCobro(this.tarifa)/100) +"\n";
+
+                parqueo.limpiar();
+                tTicketText.setText(texto);
 
                 dTicket.setModal(true);
                 dTicket.setVisible(true);
-                parqueo.limpiar();
             }
         }
         return parqueo;
@@ -453,7 +460,7 @@ public class proyecto extends javax.swing.JFrame {
                                 .addGap(216, 216, 216)
                                 .addComponent(bSotano3regresar, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(146, 146, 146)
-                                .addComponent(jButton17, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE))
+                                .addComponent(jButton17, javax.swing.GroupLayout.PREFERRED_SIZE, 100, Short.MAX_VALUE))
                             .addGroup(fSotano3Layout.createSequentialGroup()
                                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(Parqueo302, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)

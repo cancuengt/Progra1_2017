@@ -5,7 +5,9 @@
  */
 package proyecto;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.TimeZone;
 
 
 /**
@@ -18,7 +20,6 @@ public class Parqueo {
     private int numero;
     private long entrada;
     private long salida;
-    public long cobro;
     private long fraccion;
 
     /**
@@ -26,24 +27,46 @@ public class Parqueo {
      * @param sotano Número de sótano
      * @param numero Número de parqueo en el sótano
      */
-    public Parqueo(int sotano,int numero) {
+    public Parqueo(int sotano,int numero,long fraccion) {
         this.sotano   = sotano;
         this.numero   = numero;
         this.entrada  = 0;
         this.salida   = 0;
-        this.cobro    = 10;
         //this.fraccion = 30*60; // Media hora
         this.fraccion = 10; // Pruebas
     }
 
+    public String getStingEntrada(){
+        SimpleDateFormat sdfDate = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
+        String strDate           = sdfDate.format(new Date(this.entrada));
+        return strDate;
+    }
+
+    public String getStingSalida(){
+        SimpleDateFormat sdfDate = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
+        String strDate           = sdfDate.format(new Date(this.salida));
+        return strDate;
+    }
+
+    public String getStringTiempo(long tiempo){
+        SimpleDateFormat sdfDate = new SimpleDateFormat("HH:mm:ss");
+        sdfDate.setTimeZone(TimeZone.getTimeZone("GMT"));
+        String strDate           = sdfDate.format(new Date(tiempo * 1000L));
+        return strDate;
+    }
+
     public long calcularTiempo(){
         long segundos   = ((this.salida - this.entrada)/1000);
-        long fracciones = (long) Math.ceil((double) segundos / (double) this.fraccion);
+        return segundos;
+    }
+
+    public long calcularFracciones(){
+        long fracciones = (long) (Math.ceil((double) this.calcularTiempo() / (double) this.fraccion));
         return fracciones;
     }
 
     public float calcularCobro(long tarifa){
-        return ((float) this.calcularTiempo()) * ((float) tarifa);
+        return ((float) this.calcularFracciones()) * ((float) tarifa);
     }
 
     public void marcarEntrada(){
@@ -66,4 +89,5 @@ public class Parqueo {
         this.entrada = 0;
         this.salida  = 0;
     }
+
 }
