@@ -64,6 +64,7 @@ public class Parqueo {
     }
 
     public void escribirArchivo(String nombreArchivo, long tarifa){
+        String eol = System.getProperty("line.separator");
         try {
             BufferedWriter agendaArch  = new BufferedWriter(new FileWriter(nombreArchivo,true));
             String cadena = "";
@@ -72,7 +73,7 @@ public class Parqueo {
             cadena += this.entrada+"|";
             cadena += this.salida+"|";
             cadena += this.calcularTiempo()+"|";
-            cadena += String.format("%.2f",this.calcularCobro(tarifa)/100)+"\n";
+            cadena += String.format("%.2f",this.calcularCobro(tarifa)/100)+eol;
             agendaArch.write(cadena);
             agendaArch.flush();
             agendaArch.close();
