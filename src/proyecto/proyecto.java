@@ -1078,16 +1078,15 @@ public class proyecto extends javax.swing.JFrame {
     }//GEN-LAST:event_Parqueo301ActionPerformed
 
     private void Parqueo101MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Parqueo101MouseClicked
-this.sotano1[0] = this.accionParqueo(this.sotano1[0]);
+        this.sotano1[0] = this.accionParqueo(this.sotano1[0]);
         this.marcarParqueos();        
-// TODO add your handling code here:
         
     }//GEN-LAST:event_Parqueo101MouseClicked
 
     private void Parqueo102MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Parqueo102MouseClicked
-this.sotano1[1] = this.accionParqueo(this.sotano1[1]);
-        this.marcarParqueos();
-        // TODO add your handling code here:
+         this.sotano1[1] = this.accionParqueo(this.sotano1[1]);
+         this.marcarParqueos();
+        
     }//GEN-LAST:event_Parqueo102MouseClicked
 
     private void Parqueo102ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Parqueo102ActionPerformed
@@ -1099,60 +1098,51 @@ this.sotano1[1] = this.accionParqueo(this.sotano1[1]);
     }//GEN-LAST:event_Parqueo103ActionPerformed
 
     private void Parqueo103MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Parqueo103MouseClicked
-this.sotano1[2] = this.accionParqueo(this.sotano1[2]);
-        this.marcarParqueos();
-        // TODO add your handling code here:
+            this.sotano1[2] = this.accionParqueo(this.sotano1[2]);
+            this.marcarParqueos();
     }//GEN-LAST:event_Parqueo103MouseClicked
 
     private void Parqueo104MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Parqueo104MouseClicked
-this.sotano1[3] = this.accionParqueo(this.sotano1[3]);
-        this.marcarParqueos();
-        // TODO add your handling code here:
+          this.sotano1[3] = this.accionParqueo(this.sotano1[3]);
+         this.marcarParqueos();
     }//GEN-LAST:event_Parqueo104MouseClicked
 
     private void Parqueo105MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Parqueo105MouseClicked
-this.sotano1[4] = this.accionParqueo(this.sotano1[4]);
-        this.marcarParqueos();
-        // TODO add your handling code here:
+         this.sotano1[4] = this.accionParqueo(this.sotano1[4]);
+         this.marcarParqueos();
     }//GEN-LAST:event_Parqueo105MouseClicked
 
     private void Parqueo106MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Parqueo106MouseClicked
-this.sotano1[5] = this.accionParqueo(this.sotano1[5]);
-        this.marcarParqueos();
-        // TODO add your handling code here:
+          this.sotano1[5] = this.accionParqueo(this.sotano1[5]);
+          this.marcarParqueos();
     }//GEN-LAST:event_Parqueo106MouseClicked
 
     private void Parqueo107MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Parqueo107MouseClicked
-this.sotano1[6] = this.accionParqueo(this.sotano1[6]);
-        this.marcarParqueos();
-        // TODO add your handling code here:
+           this.sotano1[6] = this.accionParqueo(this.sotano1[6]);
+           this.marcarParqueos();
     }//GEN-LAST:event_Parqueo107MouseClicked
 
     private void Parqueo108MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Parqueo108MouseClicked
-this.sotano1[7] = this.accionParqueo(this.sotano1[7]);
-        this.marcarParqueos();
-        // TODO add your handling code here:
+         this.sotano1[7] = this.accionParqueo(this.sotano1[7]);
+         this.marcarParqueos();
     }//GEN-LAST:event_Parqueo108MouseClicked
 
     private void Parqueo109MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Parqueo109MouseClicked
 
-this.sotano1[8] = this.accionParqueo(this.sotano1[8]);
-        this.marcarParqueos();
-        // TODO add your handling code here:
+         this.sotano1[8] = this.accionParqueo(this.sotano1[8]);
+         this.marcarParqueos();
     }//GEN-LAST:event_Parqueo109MouseClicked
 
 
     private void Parqueo110MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Parqueo110MouseClicked
-this.sotano1[9] = this.accionParqueo(this.sotano1[9]);
-        this.marcarParqueos();
-        // TODO add your handling code here:
+         this.sotano1[9] = this.accionParqueo(this.sotano1[9]);
+         this.marcarParqueos();
     }//GEN-LAST:event_Parqueo110MouseClicked
 
     private void Parqueo111MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Parqueo111MouseClicked
 
-this.sotano1[10] = this.accionParqueo(this.sotano1[10]);
-        this.marcarParqueos();
-        // TODO add your handling code here:
+         this.sotano1[10] = this.accionParqueo(this.sotano1[10]);
+         this.marcarParqueos();
     }//GEN-LAST:event_Parqueo111MouseClicked
 
     private void Parqueo110ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Parqueo110ActionPerformed
