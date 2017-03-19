@@ -48,9 +48,9 @@
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Component id="Parqueo105" min="-2" max="-2" attributes="0"/>
                                       <Group type="102" alignment="0" attributes="0">
-                                          <Component id="Parqueo1010" min="-2" max="-2" attributes="0"/>
+                                          <Component id="Parqueo110" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace pref="46" max="32767" attributes="0"/>
-                                          <Component id="Parqueo1011" min="-2" max="-2" attributes="0"/>
+                                          <Component id="Parqueo111" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                               </Group>
@@ -82,10 +82,10 @@
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="Parqueo109" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="Parqueo108" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="Parqueo1010" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="Parqueo110" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="Parqueo107" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="Parqueo106" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="Parqueo1011" alignment="3" min="-2" pref="75" max="-2" attributes="0"/>
+                      <Component id="Parqueo111" alignment="3" min="-2" pref="75" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="55" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
@@ -205,7 +205,7 @@
             <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="Parqueo109MouseClicked"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="Parqueo1010">
+        <Component class="javax.swing.JButton" name="Parqueo110">
           <Properties>
             <Property name="text" type="java.lang.String" value="10"/>
             <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
@@ -213,7 +213,8 @@
             </Property>
           </Properties>
           <Events>
-            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="Parqueo1010MouseClicked"/>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="Parqueo110MouseClicked"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Parqueo110ActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JButton" name="bSotano1Regresar">
@@ -238,12 +239,12 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton16ActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="Parqueo1011">
+        <Component class="javax.swing.JButton" name="Parqueo111">
           <Properties>
             <Property name="text" type="java.lang.String" value="11"/>
           </Properties>
           <Events>
-            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="Parqueo1011MouseClicked"/>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="Parqueo111MouseClicked"/>
           </Events>
         </Component>
       </SubComponents>
