@@ -9,6 +9,10 @@ package proyecto;
 //import java.util.Timer;
 import java.awt.Color;
 import javax.swing.JOptionPane;
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
 
 /**
  *
@@ -55,6 +59,7 @@ public class proyecto extends javax.swing.JFrame {
 
     private void marcarParqueos() {
         this.Parqueo301.setBackground(this.sotano3[0].libre() == 1?Color.GREEN:Color.RED);
+        this.Parqueo302.setBackground(this.sotano3[1].libre() == 1?Color.GREEN:Color.RED);
     }
 
     private void contarParqueos () {
@@ -171,6 +176,14 @@ public class proyecto extends javax.swing.JFrame {
         jScrollPane2 = new javax.swing.JScrollPane();
         tTicketText = new javax.swing.JTextArea();
         bCerrarTicket = new javax.swing.JButton();
+        fStats = new javax.swing.JFrame();
+        fStatsRegresar = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
+        jLabel1 = new javax.swing.JLabel();
+        statText1 = new javax.swing.JTextField();
+        statText2 = new javax.swing.JTextField();
+        jLabel2 = new javax.swing.JLabel();
         bSotano1ir = new javax.swing.JButton();
         bSotano2ir = new javax.swing.JButton();
         bSotano3ir = new javax.swing.JButton();
@@ -182,6 +195,7 @@ public class proyecto extends javax.swing.JFrame {
         lSotano3ocupado = new javax.swing.JLabel();
         lTotalLibre = new javax.swing.JLabel();
         lTotalOcupado = new javax.swing.JLabel();
+        bStats = new javax.swing.JButton();
 
         lSotano1titulo.setText("Sotano 1");
 
@@ -477,7 +491,7 @@ public class proyecto extends javax.swing.JFrame {
                                 .addGap(216, 216, 216)
                                 .addComponent(bSotano3regresar, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(146, 146, 146)
-                                .addComponent(jButton17, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE))
+                                .addComponent(jButton17, javax.swing.GroupLayout.PREFERRED_SIZE, 100, Short.MAX_VALUE))
                             .addGroup(fSotano3Layout.createSequentialGroup()
                                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(Parqueo302, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -569,10 +583,131 @@ public class proyecto extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
+        fStats.setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
+        fStats.setMaximumSize(new java.awt.Dimension(425, 400));
+        fStats.setMinimumSize(new java.awt.Dimension(425, 400));
+        fStats.setPreferredSize(new java.awt.Dimension(425, 400));
+        fStats.setResizable(false);
+        fStats.setSize(new java.awt.Dimension(425, 400));
+
+        fStatsRegresar.setText("Regresar");
+        fStatsRegresar.setMaximumSize(new java.awt.Dimension(100, 25));
+        fStatsRegresar.setMinimumSize(new java.awt.Dimension(100, 25));
+        fStatsRegresar.setPreferredSize(new java.awt.Dimension(100, 25));
+        fStatsRegresar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                fStatsRegresarMouseClicked(evt);
+            }
+        });
+
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null}
+            },
+            new String [] {
+                "Fecha", "Usuarios"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.String.class, java.lang.Integer.class
+            };
+            boolean[] canEdit = new boolean [] {
+                false, false
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jScrollPane1.setViewportView(jTable1);
+
+        jLabel1.setText("Horas de mas vehiculos");
+
+        statText1.setEditable(false);
+
+        statText2.setEditable(false);
+
+        jLabel2.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        jLabel2.setText("Estadísticas");
+
+        javax.swing.GroupLayout fStatsLayout = new javax.swing.GroupLayout(fStats.getContentPane());
+        fStats.getContentPane().setLayout(fStatsLayout);
+        fStatsLayout.setHorizontalGroup(
+            fStatsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(fStatsLayout.createSequentialGroup()
+                .addGroup(fStatsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(fStatsLayout.createSequentialGroup()
+                        .addGap(145, 145, 145)
+                        .addComponent(jLabel2)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                    .addGroup(fStatsLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(statText1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(statText2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 50, Short.MAX_VALUE)
+                        .addComponent(fStatsRegresar, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap())
+        );
+        fStatsLayout.setVerticalGroup(
+            fStatsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, fStatsLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 268, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(27, 27, 27)
+                .addGroup(fStatsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel1)
+                    .addComponent(statText1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(statText2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(fStatsRegresar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(87, 87, 87))
+        );
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         bSotano1ir.setToolTipText("");
         bSotano1ir.setLabel("Sotano 1");
+        bSotano1ir.setMaximumSize(new java.awt.Dimension(100, 25));
+        bSotano1ir.setMinimumSize(new java.awt.Dimension(100, 25));
+        bSotano1ir.setPreferredSize(new java.awt.Dimension(100, 25));
         bSotano1ir.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 bSotano1irMouseClicked(evt);
@@ -681,42 +816,52 @@ public class proyecto extends javax.swing.JFrame {
         lTotalOcupado.setOpaque(true);
         lTotalOcupado.setPreferredSize(new java.awt.Dimension(25, 17));
 
+        bStats.setLabel("Stats");
+        bStats.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                bStatsMouseClicked(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(90, 90, 90)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(bSotano1ir)
-                    .addComponent(bSotano2ir)
-                    .addComponent(bSotano3ir))
-                .addGap(45, 45, 45)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(bStats, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(lTotalLibre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(lTotalOcupado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(lSotano3libre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(lSotano3ocupado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(lSotano2libre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(lSotano2ocupado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(lSotano1Libre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(lSotano1ocupado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(100, Short.MAX_VALUE))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(bSotano1ir, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(bSotano2ir, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(bSotano3ir, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(45, 45, 45)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(lTotalLibre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(lTotalOcupado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(lSotano3libre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(lSotano3ocupado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(lSotano2libre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(lSotano2ocupado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(lSotano1Libre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(lSotano1ocupado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addContainerGap(97, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(77, 77, 77)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(bSotano1ir)
+                    .addComponent(bSotano1ir, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lSotano1Libre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lSotano1ocupado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
@@ -733,8 +878,12 @@ public class proyecto extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lTotalLibre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lTotalOcupado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(77, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(bStats, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(34, Short.MAX_VALUE))
         );
+
+        bStats.getAccessibleContext().setAccessibleDescription("");
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -781,6 +930,57 @@ public class proyecto extends javax.swing.JFrame {
     private void jButton16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton16ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton16ActionPerformed
+
+    private void bStatsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bStatsMouseClicked
+        stats estadisticas = new stats();
+        String[] registro = new String[6];
+        String linea;
+
+        try{
+            BufferedReader br = new BufferedReader(new FileReader(this.archivo));
+            while ( (linea = br.readLine() ) != null) {
+                registro = linea.split("\\|");
+                estadisticas.procesarRegistro(Long.parseLong(registro[2]));
+            }
+            br.close();
+        } catch (FileNotFoundException ex) {
+            JOptionPane.showMessageDialog(this, "No se puede encontrar el archivo");
+        } catch (IOException ex) {
+            JOptionPane.showMessageDialog(this, "No se puede leer el archivo");
+        }
+
+        estadisticas.ordenarFechas();
+        estadisticas.horasMaximas();
+
+        for(int i = 0; i < estadisticas.registros; i++){
+            jTable1.setValueAt(estadisticas.fechas[i], i, 0);
+            jTable1.setValueAt(estadisticas.autos[i],  i, 1);
+        }
+        statText1.setText(String.valueOf(estadisticas.maxHoras[0]));
+        statText2.setText(String.valueOf(estadisticas.maxHoras[1]));
+
+/*
+        for(int i = 0; i < 24; i++){
+            jTable1.setValueAt(i, i, 0);
+            jTable1.setValueAt(String.valueOf(estadisticas.horas[i]), i, 1);
+        }
+//*/
+
+        this.setVisible(false);
+        fStats.setVisible(true);
+    }//GEN-LAST:event_bStatsMouseClicked
+
+    private void fStatsRegresarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_fStatsRegresarMouseClicked
+        for(int i = 0;i < jTable1.getRowCount();i++){
+            jTable1.setValueAt("", i, 0);
+            jTable1.setValueAt("", i, 1);
+        }
+        statText1.setText("");
+        statText2.setText("");
+
+        fStats.setVisible(false);
+        this.setVisible(true);
+    }//GEN-LAST:event_fStatsRegresarMouseClicked
 
     /**
      * @param args the command line arguments
@@ -857,15 +1057,22 @@ public class proyecto extends javax.swing.JFrame {
     private javax.swing.JButton bSotano2regresar;
     private javax.swing.JButton bSotano3ir;
     private javax.swing.JButton bSotano3regresar;
+    private javax.swing.JButton bStats;
     private javax.swing.JDialog dTicket;
     private javax.swing.JFrame fSotano1;
     private javax.swing.JFrame fSotano2;
     private javax.swing.JFrame fSotano3;
+    private javax.swing.JFrame fStats;
+    private javax.swing.JButton fStatsRegresar;
     private javax.swing.JButton jButton16;
     private javax.swing.JButton jButton17;
     private javax.swing.JButton jButton21;
     private javax.swing.JButton jButton24;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JTable jTable1;
     private javax.swing.JLabel lSotano1Libre;
     private javax.swing.JLabel lSotano1ocupado;
     private javax.swing.JLabel lSotano1titulo;
@@ -877,6 +1084,8 @@ public class proyecto extends javax.swing.JFrame {
     private javax.swing.JLabel lSotano3titulo;
     private javax.swing.JLabel lTotalLibre;
     private javax.swing.JLabel lTotalOcupado;
+    private javax.swing.JTextField statText1;
+    private javax.swing.JTextField statText2;
     private javax.swing.JTextArea tTicketText;
     // End of variables declaration//GEN-END:variables
 }
