@@ -123,7 +123,6 @@
           </Properties>
           <Events>
             <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="Parqueo102MouseClicked"/>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Parqueo102ActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JButton" name="Parqueo103">
@@ -135,7 +134,6 @@
           </Properties>
           <Events>
             <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="Parqueo103MouseClicked"/>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Parqueo103ActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JButton" name="Parqueo104">
@@ -169,7 +167,6 @@
           </Properties>
           <Events>
             <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="Parqueo107MouseClicked"/>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Parqueo107ActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JButton" name="Parqueo106">
@@ -214,7 +211,6 @@
           </Properties>
           <Events>
             <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="Parqueo110MouseClicked"/>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Parqueo110ActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JButton" name="bSotano1Regresar">

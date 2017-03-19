@@ -58,18 +58,18 @@ public class proyecto extends javax.swing.JFrame {
     }
 
     private void marcarParqueos() {
-          this.Parqueo101.setBackground(this.sotano1[0].libre() == 1?Color.GREEN:Color.RED);
-          this.Parqueo102.setBackground(this.sotano1[1].libre() == 1?Color.GREEN:Color.RED);
-          this.Parqueo103.setBackground(this.sotano1[2].libre() == 1?Color.GREEN:Color.RED);
-          this.Parqueo104.setBackground(this.sotano1[3].libre() == 1?Color.GREEN:Color.RED);
-          this.Parqueo105.setBackground(this.sotano1[4].libre() == 1?Color.GREEN:Color.RED);
-          this.Parqueo106.setBackground(this.sotano1[5].libre() == 1?Color.GREEN:Color.RED);
-          this.Parqueo107.setBackground(this.sotano1[6].libre() == 1?Color.GREEN:Color.RED);
-          this.Parqueo108.setBackground(this.sotano1[7].libre() == 1?Color.GREEN:Color.RED);
-          this.Parqueo109.setBackground(this.sotano1[8].libre() == 1?Color.GREEN:Color.RED);
-          this.Parqueo110.setBackground(this.sotano1[9].libre() == 1?Color.GREEN:Color.RED);
-          this.Parqueo111.setBackground(this.sotano1[10].libre() == 1?Color.GREEN:Color.RED);
-       this.Parqueo301.setBackground(this.sotano3[0].libre() == 1?Color.GREEN:Color.RED);
+        this.Parqueo101.setBackground(this.sotano1[0].libre() == 1?Color.GREEN:Color.RED);
+        this.Parqueo102.setBackground(this.sotano1[1].libre() == 1?Color.GREEN:Color.RED);
+        this.Parqueo103.setBackground(this.sotano1[2].libre() == 1?Color.GREEN:Color.RED);
+        this.Parqueo104.setBackground(this.sotano1[3].libre() == 1?Color.GREEN:Color.RED);
+        this.Parqueo105.setBackground(this.sotano1[4].libre() == 1?Color.GREEN:Color.RED);
+        this.Parqueo106.setBackground(this.sotano1[5].libre() == 1?Color.GREEN:Color.RED);
+        this.Parqueo107.setBackground(this.sotano1[6].libre() == 1?Color.GREEN:Color.RED);
+        this.Parqueo108.setBackground(this.sotano1[7].libre() == 1?Color.GREEN:Color.RED);
+        this.Parqueo109.setBackground(this.sotano1[8].libre() == 1?Color.GREEN:Color.RED);
+        this.Parqueo110.setBackground(this.sotano1[9].libre() == 1?Color.GREEN:Color.RED);
+        this.Parqueo111.setBackground(this.sotano1[10].libre() == 1?Color.GREEN:Color.RED);
+        this.Parqueo301.setBackground(this.sotano3[0].libre() == 1?Color.GREEN:Color.RED);
         this.Parqueo302.setBackground(this.sotano3[1].libre() == 1?Color.GREEN:Color.RED);
     }
 
@@ -226,22 +226,12 @@ public class proyecto extends javax.swing.JFrame {
                 Parqueo102MouseClicked(evt);
             }
         });
-        Parqueo102.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Parqueo102ActionPerformed(evt);
-            }
-        });
 
         Parqueo103.setText("03");
         Parqueo103.setPreferredSize(new java.awt.Dimension(50, 75));
         Parqueo103.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 Parqueo103MouseClicked(evt);
-            }
-        });
-        Parqueo103.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Parqueo103ActionPerformed(evt);
             }
         });
 
@@ -266,11 +256,6 @@ public class proyecto extends javax.swing.JFrame {
         Parqueo107.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 Parqueo107MouseClicked(evt);
-            }
-        });
-        Parqueo107.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Parqueo107ActionPerformed(evt);
             }
         });
 
@@ -303,11 +288,6 @@ public class proyecto extends javax.swing.JFrame {
         Parqueo110.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 Parqueo110MouseClicked(evt);
-            }
-        });
-        Parqueo110.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Parqueo110ActionPerformed(evt);
             }
         });
 
@@ -584,7 +564,7 @@ public class proyecto extends javax.swing.JFrame {
                                 .addGap(216, 216, 216)
                                 .addComponent(bSotano3regresar, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(146, 146, 146)
-                                .addComponent(jButton17, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE))
+                                .addComponent(jButton17, javax.swing.GroupLayout.PREFERRED_SIZE, 100, Short.MAX_VALUE))
                             .addGroup(fSotano3Layout.createSequentialGroup()
                                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(Parqueo302, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1010,10 +990,6 @@ public class proyecto extends javax.swing.JFrame {
         dTicket.setVisible(false);
     }//GEN-LAST:event_bCerrarTicketMouseClicked
 
-    private void Parqueo107ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Parqueo107ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Parqueo107ActionPerformed
-
     private void bSotano1RegresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bSotano1RegresarActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_bSotano1RegresarActionPerformed
@@ -1079,75 +1055,58 @@ public class proyecto extends javax.swing.JFrame {
 
     private void Parqueo101MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Parqueo101MouseClicked
         this.sotano1[0] = this.accionParqueo(this.sotano1[0]);
-        this.marcarParqueos();        
-        
+        this.marcarParqueos();
     }//GEN-LAST:event_Parqueo101MouseClicked
 
     private void Parqueo102MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Parqueo102MouseClicked
-         this.sotano1[1] = this.accionParqueo(this.sotano1[1]);
-         this.marcarParqueos();
-        
+        this.sotano1[1] = this.accionParqueo(this.sotano1[1]);
+        this.marcarParqueos();
     }//GEN-LAST:event_Parqueo102MouseClicked
 
-    private void Parqueo102ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Parqueo102ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Parqueo102ActionPerformed
-
-    private void Parqueo103ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Parqueo103ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Parqueo103ActionPerformed
-
     private void Parqueo103MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Parqueo103MouseClicked
-            this.sotano1[2] = this.accionParqueo(this.sotano1[2]);
-            this.marcarParqueos();
+        this.sotano1[2] = this.accionParqueo(this.sotano1[2]);
+        this.marcarParqueos();
     }//GEN-LAST:event_Parqueo103MouseClicked
 
     private void Parqueo104MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Parqueo104MouseClicked
-          this.sotano1[3] = this.accionParqueo(this.sotano1[3]);
-         this.marcarParqueos();
+        this.sotano1[3] = this.accionParqueo(this.sotano1[3]);
+        this.marcarParqueos();
     }//GEN-LAST:event_Parqueo104MouseClicked
 
     private void Parqueo105MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Parqueo105MouseClicked
-         this.sotano1[4] = this.accionParqueo(this.sotano1[4]);
-         this.marcarParqueos();
+        this.sotano1[4] = this.accionParqueo(this.sotano1[4]);
+        this.marcarParqueos();
     }//GEN-LAST:event_Parqueo105MouseClicked
 
     private void Parqueo106MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Parqueo106MouseClicked
-          this.sotano1[5] = this.accionParqueo(this.sotano1[5]);
-          this.marcarParqueos();
+        this.sotano1[5] = this.accionParqueo(this.sotano1[5]);
+        this.marcarParqueos();
     }//GEN-LAST:event_Parqueo106MouseClicked
 
     private void Parqueo107MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Parqueo107MouseClicked
-           this.sotano1[6] = this.accionParqueo(this.sotano1[6]);
-           this.marcarParqueos();
+        this.sotano1[6] = this.accionParqueo(this.sotano1[6]);
+        this.marcarParqueos();
     }//GEN-LAST:event_Parqueo107MouseClicked
 
     private void Parqueo108MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Parqueo108MouseClicked
-         this.sotano1[7] = this.accionParqueo(this.sotano1[7]);
-         this.marcarParqueos();
+        this.sotano1[7] = this.accionParqueo(this.sotano1[7]);
+        this.marcarParqueos();
     }//GEN-LAST:event_Parqueo108MouseClicked
 
     private void Parqueo109MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Parqueo109MouseClicked
-
-         this.sotano1[8] = this.accionParqueo(this.sotano1[8]);
-         this.marcarParqueos();
+        this.sotano1[8] = this.accionParqueo(this.sotano1[8]);
+        this.marcarParqueos();
     }//GEN-LAST:event_Parqueo109MouseClicked
 
-
     private void Parqueo110MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Parqueo110MouseClicked
-         this.sotano1[9] = this.accionParqueo(this.sotano1[9]);
-         this.marcarParqueos();
+        this.sotano1[9] = this.accionParqueo(this.sotano1[9]);
+        this.marcarParqueos();
     }//GEN-LAST:event_Parqueo110MouseClicked
 
     private void Parqueo111MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Parqueo111MouseClicked
-
-         this.sotano1[10] = this.accionParqueo(this.sotano1[10]);
-         this.marcarParqueos();
+        this.sotano1[10] = this.accionParqueo(this.sotano1[10]);
+        this.marcarParqueos();
     }//GEN-LAST:event_Parqueo111MouseClicked
-
-    private void Parqueo110ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Parqueo110ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Parqueo110ActionPerformed
 
     /**
      * @param args the command line arguments
