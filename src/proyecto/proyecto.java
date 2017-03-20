@@ -34,7 +34,8 @@ public class proyecto extends javax.swing.JFrame {
         initComponents();
 
         this.tarifa   = 411; // Centavos (por redondeo)
-        this.fraccion = 10;  // Segundos
+        //this.fraccion = 30*60; // Media hora
+        this.fraccion = 10; // Pruebas
         this.archivo  = "registro.log";
 
         // Inicialización de parqueos
@@ -80,7 +81,7 @@ public class proyecto extends javax.swing.JFrame {
         this.Parqueo309.setBackground(this.sotano3[8].libre() == 1?Color.GREEN:Color.RED);
         this.Parqueo310.setBackground(this.sotano3[9].libre() == 1?Color.GREEN:Color.RED);
         this.Parqueo311.setBackground(this.sotano3[10].libre() == 1?Color.GREEN:Color.RED);
-                
+
     }
 
     private void contarParqueos () {
@@ -226,11 +227,6 @@ public class proyecto extends javax.swing.JFrame {
                 Parqueo101MouseClicked(evt);
             }
         });
-        Parqueo101.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Parqueo101ActionPerformed(evt);
-            }
-        });
 
         Parqueo102.setText("02");
         Parqueo102.setPreferredSize(new java.awt.Dimension(50, 75));
@@ -271,11 +267,6 @@ public class proyecto extends javax.swing.JFrame {
                 Parqueo106MouseClicked(evt);
             }
         });
-        Parqueo106.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Parqueo106ActionPerformed(evt);
-            }
-        });
 
         Parqueo107.setText("07");
         Parqueo107.setPreferredSize(new java.awt.Dimension(50, 75));
@@ -311,19 +302,9 @@ public class proyecto extends javax.swing.JFrame {
 
         bSotano1Regresar.setText("Regresar");
         bSotano1Regresar.setPreferredSize(new java.awt.Dimension(100, 100));
-        bSotano1Regresar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bSotano1RegresarActionPerformed(evt);
-            }
-        });
 
         jButton16.setText("Regresar");
         jButton16.setPreferredSize(new java.awt.Dimension(100, 100));
-        jButton16.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton16ActionPerformed(evt);
-            }
-        });
 
         Parqueo111.setText("11");
         Parqueo111.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -513,11 +494,6 @@ public class proyecto extends javax.swing.JFrame {
                 Parqueo301MouseClicked(evt);
             }
         });
-        Parqueo301.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Parqueo301ActionPerformed(evt);
-            }
-        });
 
         Parqueo302.setText("02");
         Parqueo302.setToolTipText("");
@@ -568,11 +544,6 @@ public class proyecto extends javax.swing.JFrame {
                 Parqueo308MouseClicked(evt);
             }
         });
-        Parqueo308.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Parqueo308ActionPerformed(evt);
-            }
-        });
 
         Parqueo309.setText("09");
         Parqueo309.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -592,11 +563,6 @@ public class proyecto extends javax.swing.JFrame {
         Parqueo311.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 Parqueo311MouseClicked(evt);
-            }
-        });
-        Parqueo311.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Parqueo311ActionPerformed(evt);
             }
         });
 
@@ -623,7 +589,7 @@ public class proyecto extends javax.swing.JFrame {
                         .addGap(216, 216, 216)
                         .addComponent(bSotano3regresar, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(146, 146, 146)
-                        .addComponent(jButton17, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
+                        .addComponent(jButton17, javax.swing.GroupLayout.PREFERRED_SIZE, 100, Short.MAX_VALUE)
                         .addGap(100, 100, 100))
                     .addGroup(fSotano3Layout.createSequentialGroup()
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -852,11 +818,6 @@ public class proyecto extends javax.swing.JFrame {
                 bSotano1irMouseClicked(evt);
             }
         });
-        bSotano1ir.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bSotano1irActionPerformed(evt);
-            }
-        });
 
         bSotano2ir.setLabel("Sotano 2");
         bSotano2ir.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -869,11 +830,6 @@ public class proyecto extends javax.swing.JFrame {
         bSotano3ir.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 bSotano3irMouseClicked(evt);
-            }
-        });
-        bSotano3ir.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bSotano3irActionPerformed(evt);
             }
         });
 
@@ -1037,11 +993,6 @@ public class proyecto extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void Parqueo301MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Parqueo301MouseClicked
-        this.sotano3[0] = this.accionParqueo(this.sotano3[0]);
-        this.marcarParqueos();
-    }//GEN-LAST:event_Parqueo301MouseClicked
-
     private void bSotano1irMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bSotano1irMouseClicked
         this.setVisible(false);
         fSotano1.setVisible(true);
@@ -1067,14 +1018,6 @@ public class proyecto extends javax.swing.JFrame {
         dTicket.setModal(false);
         dTicket.setVisible(false);
     }//GEN-LAST:event_bCerrarTicketMouseClicked
-
-    private void bSotano1RegresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bSotano1RegresarActionPerformed
-      
-    }//GEN-LAST:event_bSotano1RegresarActionPerformed
-
-    private void jButton16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton16ActionPerformed
-        
-    }//GEN-LAST:event_jButton16ActionPerformed
 
     private void bStatsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bStatsMouseClicked
         stats estadisticas = new stats();
@@ -1127,10 +1070,6 @@ public class proyecto extends javax.swing.JFrame {
         this.setVisible(true);
     }//GEN-LAST:event_fStatsRegresarMouseClicked
 
-    private void Parqueo301ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Parqueo301ActionPerformed
-        
-    }//GEN-LAST:event_Parqueo301ActionPerformed
-
     private void Parqueo101MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Parqueo101MouseClicked
         this.sotano1[0] = this.accionParqueo(this.sotano1[0]);
         this.marcarParqueos();
@@ -1156,15 +1095,15 @@ public class proyecto extends javax.swing.JFrame {
         this.marcarParqueos();
     }//GEN-LAST:event_Parqueo105MouseClicked
 
-    private void Parqueo107MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Parqueo107MouseClicked
+    private void Parqueo106MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Parqueo106MouseClicked
         this.sotano1[5] = this.accionParqueo(this.sotano1[5]);
         this.marcarParqueos();
-    }//GEN-LAST:event_Parqueo107MouseClicked
+    }//GEN-LAST:event_Parqueo106MouseClicked
 
-    private void Parqueo106MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Parqueo106MouseClicked
+    private void Parqueo107MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Parqueo107MouseClicked
         this.sotano1[6] = this.accionParqueo(this.sotano1[6]);
         this.marcarParqueos();
-    }//GEN-LAST:event_Parqueo106MouseClicked
+    }//GEN-LAST:event_Parqueo107MouseClicked
 
     private void Parqueo108MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Parqueo108MouseClicked
         this.sotano1[7] = this.accionParqueo(this.sotano1[7]);
@@ -1186,29 +1125,10 @@ public class proyecto extends javax.swing.JFrame {
         this.marcarParqueos();
     }//GEN-LAST:event_Parqueo111MouseClicked
 
-    private void bSotano3irActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bSotano3irActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_bSotano3irActionPerformed
-
-    private void bSotano1irActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bSotano1irActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_bSotano1irActionPerformed
-
-    private void Parqueo308ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Parqueo308ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Parqueo308ActionPerformed
-
-    private void Parqueo311ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Parqueo311ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Parqueo311ActionPerformed
-
-    private void Parqueo106ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Parqueo106ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Parqueo106ActionPerformed
-
-    private void Parqueo101ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Parqueo101ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Parqueo101ActionPerformed
+    private void Parqueo301MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Parqueo301MouseClicked
+        this.sotano3[0] = this.accionParqueo(this.sotano3[0]);
+        this.marcarParqueos();
+    }//GEN-LAST:event_Parqueo301MouseClicked
 
     private void Parqueo302MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Parqueo302MouseClicked
         this.sotano3[1] = this.accionParqueo(this.sotano3[1]);
