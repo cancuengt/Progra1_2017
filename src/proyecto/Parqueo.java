@@ -35,8 +35,7 @@ public class Parqueo {
         this.numero   = numero;
         this.entrada  = 0;
         this.salida   = 0;
-        //this.fraccion = 30*60; // Media hora
-        this.fraccion = 10; // Pruebas
+        this.fraccion = fraccion;
     }
 
     public String getStingEntrada(){
