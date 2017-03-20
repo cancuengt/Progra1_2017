@@ -991,11 +991,11 @@ public class proyecto extends javax.swing.JFrame {
     }//GEN-LAST:event_bCerrarTicketMouseClicked
 
     private void bSotano1RegresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bSotano1RegresarActionPerformed
-        // TODO add your handling code here:
+      
     }//GEN-LAST:event_bSotano1RegresarActionPerformed
 
     private void jButton16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton16ActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_jButton16ActionPerformed
 
     private void bStatsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bStatsMouseClicked
@@ -1050,7 +1050,7 @@ public class proyecto extends javax.swing.JFrame {
     }//GEN-LAST:event_fStatsRegresarMouseClicked
 
     private void Parqueo301ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Parqueo301ActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_Parqueo301ActionPerformed
 
     private void Parqueo101MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Parqueo101MouseClicked
