@@ -285,15 +285,12 @@
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="Parqueo209" alignment="0" min="-2" pref="50" max="-2" attributes="0"/>
                               <Group type="102" alignment="0" attributes="0">
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="Parqueo204" alignment="0" min="-2" pref="50" max="-2" attributes="0"/>
-                                      <Component id="jButton21" alignment="0" min="-2" pref="50" max="-2" attributes="0"/>
-                                  </Group>
+                                  <Component id="Parqueo204" min="-2" pref="50" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
                                   <Component id="Parqueo205" min="-2" pref="50" max="-2" attributes="0"/>
                               </Group>
                           </Group>
-                          <EmptySpace pref="13" max="32767" attributes="0"/>
+                          <EmptySpace pref="20" max="32767" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
@@ -325,7 +322,6 @@
                       <Component id="Parqueo204" min="-2" pref="75" max="-2" attributes="0"/>
                       <Group type="103" alignment="0" groupAlignment="3" attributes="0">
                           <Component id="Parqueo203" alignment="3" min="-2" pref="75" max="-2" attributes="0"/>
-                          <Component id="jButton21" alignment="3" min="-2" pref="75" max="-2" attributes="0"/>
                           <Component id="Parqueo205" alignment="3" min="-2" pref="75" max="-2" attributes="0"/>
                       </Group>
                   </Group>
@@ -349,51 +345,74 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="01"/>
           </Properties>
-        </Component>
-        <Component class="javax.swing.JButton" name="Parqueo206">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="06"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JButton" name="Parqueo207">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="07"/>
-          </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="Parqueo201MouseClicked"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Parqueo201ActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="Parqueo202">
           <Properties>
             <Property name="text" type="java.lang.String" value="02"/>
           </Properties>
-        </Component>
-        <Component class="javax.swing.JButton" name="Parqueo208">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="08"/>
-          </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="Parqueo202MouseClicked"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="Parqueo203">
           <Properties>
             <Property name="text" type="java.lang.String" value="03"/>
           </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="Parqueo203MouseClicked"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="Parqueo204">
           <Properties>
             <Property name="text" type="java.lang.String" value="04"/>
           </Properties>
-        </Component>
-        <Component class="javax.swing.JButton" name="jButton21">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="jButton1"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JButton" name="Parqueo209">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="09"/>
-          </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="Parqueo204MouseClicked"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="Parqueo205">
           <Properties>
             <Property name="text" type="java.lang.String" value="05"/>
           </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="Parqueo205MouseClicked"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="Parqueo206">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="06"/>
+          </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="Parqueo206MouseClicked"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="Parqueo207">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="07"/>
+          </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="Parqueo207MouseClicked"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="Parqueo208">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="08"/>
+          </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="Parqueo208MouseClicked"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="Parqueo209">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="09"/>
+          </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="Parqueo209MouseClicked"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="jButton24">
           <Properties>
@@ -404,6 +423,9 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="Regresar"/>
           </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="bSotano2regresarMouseClicked"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>
@@ -946,6 +968,7 @@
       </Properties>
       <Events>
         <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="bSotano2irMouseClicked"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bSotano2irActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JButton" name="bSotano3ir">
