@@ -3,65 +3,63 @@
 <Form version="1.5" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
   <NonVisualComponents>
     <Container class="javax.swing.JFrame" name="fSotano1">
+      <Properties>
+        <Property name="defaultCloseOperation" type="int" value="0"/>
+        <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[450, 300]"/>
+        </Property>
+        <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[450, 300]"/>
+        </Property>
+        <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[450, 300]"/>
+        </Property>
+        <Property name="size" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[450, 300]"/>
+        </Property>
+      </Properties>
 
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="lSotano1titulo" min="-2" max="-2" attributes="0"/>
                       <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="lSotano1titulo" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="139" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="1" attributes="0">
-                              <Group type="102" alignment="1" attributes="0">
-                                  <Component id="bSotano1Regresar" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="Parqueo107" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Component id="Parqueo108" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Component id="Parqueo109" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Component id="Parqueo110" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Component id="Parqueo111" max="32767" attributes="0"/>
                               </Group>
-                              <Group type="102" alignment="1" attributes="0">
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="Parqueo101" min="-2" max="-2" attributes="0"/>
-                                      <Component id="Parqueo106" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace min="-2" pref="56" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="Parqueo102" min="-2" max="-2" attributes="0"/>
-                                      <Component id="Parqueo107" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace min="-2" pref="63" max="-2" attributes="0"/>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="Parqueo101" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Component id="Parqueo102" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Component id="Parqueo103" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Component id="Parqueo104" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Component id="Parqueo105" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" attributes="0">
-                                  <Group type="103" groupAlignment="1" attributes="0">
-                                      <Component id="Parqueo108" min="-2" max="-2" attributes="0"/>
-                                      <Component id="Parqueo103" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="Parqueo104" alignment="1" min="-2" max="-2" attributes="0"/>
-                                      <Component id="Parqueo109" alignment="1" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace min="-2" pref="51" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="Parqueo105" min="-2" max="-2" attributes="0"/>
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <Component id="Parqueo110" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace pref="46" max="32767" attributes="0"/>
-                                          <Component id="Parqueo111" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                  </Group>
-                              </Group>
-                              <Group type="102" attributes="0">
-                                  <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
-                                  <Component id="jButton16" min="-2" max="-2" attributes="0"/>
-                              </Group>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Component id="Parqueo106" max="32767" attributes="0"/>
+                              <Component id="Parqueo112" max="32767" attributes="0"/>
                           </Group>
                       </Group>
+                      <Component id="parqueo1regresar" alignment="0" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
+                  <EmptySpace pref="48" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -70,29 +68,27 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="lSotano1titulo" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="61" max="-2" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="Parqueo101" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="Parqueo102" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="Parqueo103" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="Parqueo104" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="Parqueo105" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="Parqueo106" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace min="45" pref="45" max="-2" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="Parqueo109" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="Parqueo108" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="Parqueo110" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="Parqueo111" alignment="3" min="-2" pref="75" max="-2" attributes="0"/>
                       <Component id="Parqueo107" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="Parqueo106" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="Parqueo112" alignment="3" min="-2" pref="76" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace min="-2" pref="55" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="bSotano1Regresar" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
-                      <Component id="jButton16" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace pref="29" max="32767" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Component id="parqueo1regresar" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace pref="43" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -213,22 +209,6 @@
             <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="Parqueo110MouseClicked"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="bSotano1Regresar">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Regresar"/>
-            <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-              <Dimension value="[100, 100]"/>
-            </Property>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JButton" name="jButton16">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Regresar"/>
-            <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-              <Dimension value="[100, 100]"/>
-            </Property>
-          </Properties>
-        </Component>
         <Component class="javax.swing.JButton" name="Parqueo111">
           <Properties>
             <Property name="text" type="java.lang.String" value="11"/>
@@ -237,12 +217,38 @@
             <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="Parqueo111MouseClicked"/>
           </Events>
         </Component>
+        <Component class="javax.swing.JButton" name="Parqueo112">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="12"/>
+          </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="Parqueo112MouseClicked"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="parqueo1regresar">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Regresar"/>
+          </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="parqueo1regresarMouseClicked"/>
+          </Events>
+        </Component>
       </SubComponents>
     </Container>
     <Container class="javax.swing.JFrame" name="fSotano2">
       <Properties>
+        <Property name="defaultCloseOperation" type="int" value="0"/>
+        <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[450, 300]"/>
+        </Property>
+        <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[450, 300]"/>
+        </Property>
+        <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[450, 300]"/>
+        </Property>
         <Property name="size" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-          <Dimension value="[800, 500]"/>
+          <Dimension value="[450, 300]"/>
         </Property>
       </Properties>
 
@@ -251,48 +257,36 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="lSotano2titulo" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace max="32767" attributes="0"/>
-              </Group>
-              <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace min="93" pref="93" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="bSotano2regresar" alignment="0" min="-2" pref="127" max="-2" attributes="0"/>
+                      <Component id="lSotano2titulo" min="-2" max="-2" attributes="0"/>
                       <Group type="102" alignment="0" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="Parqueo206" min="-2" pref="50" max="-2" attributes="0"/>
                               <Component id="Parqueo201" min="-2" pref="50" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="Parqueo207" alignment="0" min="-2" pref="50" max="-2" attributes="0"/>
                               <Component id="Parqueo202" alignment="0" min="-2" pref="50" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="Parqueo208" alignment="0" min="-2" pref="50" max="-2" attributes="0"/>
                               <Component id="Parqueo203" alignment="0" min="-2" pref="50" max="-2" attributes="0"/>
                           </Group>
-                      </Group>
-                  </Group>
-                  <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" attributes="0">
-                          <Component id="jButton24" min="-2" pref="127" max="-2" attributes="0"/>
-                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                      </Group>
-                      <Group type="102" attributes="0">
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="Parqueo209" alignment="0" min="-2" pref="50" max="-2" attributes="0"/>
                               <Group type="102" alignment="0" attributes="0">
                                   <Component id="Parqueo204" min="-2" pref="50" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Component id="Parqueo205" min="-2" pref="50" max="-2" attributes="0"/>
                               </Group>
                           </Group>
-                          <EmptySpace pref="20" max="32767" attributes="0"/>
                       </Group>
+                      <Component id="parqueo2regresar" alignment="0" min="-2" max="-2" attributes="0"/>
                   </Group>
+                  <EmptySpace pref="116" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -301,36 +295,26 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="lSotano2titulo" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="103" max="-2" attributes="0"/>
-                          <Component id="Parqueo206" min="-2" pref="75" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="Parqueo202" alignment="3" min="-2" pref="75" max="-2" attributes="0"/>
-                              <Component id="Parqueo201" alignment="3" min="-2" pref="75" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="Parqueo207" alignment="3" min="-2" pref="75" max="-2" attributes="0"/>
-                              <Component id="Parqueo208" alignment="3" min="-2" pref="75" max="-2" attributes="0"/>
-                              <Component id="Parqueo209" alignment="3" min="-2" pref="75" max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
-                      <Component id="Parqueo204" min="-2" pref="75" max="-2" attributes="0"/>
-                      <Group type="103" alignment="0" groupAlignment="3" attributes="0">
-                          <Component id="Parqueo203" alignment="3" min="-2" pref="75" max="-2" attributes="0"/>
+                      <Component id="Parqueo201" alignment="0" min="-2" pref="75" max="-2" attributes="0"/>
+                      <Component id="Parqueo203" alignment="0" min="-2" pref="75" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="Parqueo204" alignment="3" min="-2" pref="75" max="-2" attributes="0"/>
                           <Component id="Parqueo205" alignment="3" min="-2" pref="75" max="-2" attributes="0"/>
                       </Group>
+                      <Component id="Parqueo202" min="-2" pref="75" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="105" max="32767" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="bSotano2regresar" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
-                      <Component id="jButton24" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="Parqueo206" alignment="0" min="-2" pref="75" max="-2" attributes="0"/>
+                      <Component id="Parqueo208" alignment="0" min="-2" pref="75" max="-2" attributes="0"/>
+                      <Component id="Parqueo209" alignment="0" min="-2" pref="75" max="-2" attributes="0"/>
+                      <Component id="Parqueo207" alignment="0" min="-2" pref="75" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace min="-2" pref="71" max="-2" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Component id="parqueo2regresar" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace pref="44" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -347,7 +331,6 @@
           </Properties>
           <Events>
             <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="Parqueo201MouseClicked"/>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Parqueo201ActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JButton" name="Parqueo202">
@@ -414,25 +397,30 @@
             <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="Parqueo209MouseClicked"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton24">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Regresar"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JButton" name="bSotano2regresar">
+        <Component class="javax.swing.JButton" name="parqueo2regresar">
           <Properties>
             <Property name="text" type="java.lang.String" value="Regresar"/>
           </Properties>
           <Events>
-            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="bSotano2regresarMouseClicked"/>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="parqueo2regresarMouseClicked"/>
           </Events>
         </Component>
       </SubComponents>
     </Container>
     <Container class="javax.swing.JFrame" name="fSotano3">
       <Properties>
+        <Property name="defaultCloseOperation" type="int" value="0"/>
+        <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[450, 300]"/>
+        </Property>
+        <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[450, 300]"/>
+        </Property>
+        <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[450, 300]"/>
+        </Property>
         <Property name="size" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-          <Dimension value="[800, 500]"/>
+          <Dimension value="[450, 300]"/>
         </Property>
       </Properties>
 
@@ -441,52 +429,36 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="lSotano3titulo" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace max="32767" attributes="0"/>
-              </Group>
-              <Group type="102" alignment="1" attributes="0">
-                  <Group type="103" groupAlignment="1" attributes="0">
-                      <Group type="102" alignment="1" attributes="0">
-                          <EmptySpace min="-2" pref="216" max="-2" attributes="0"/>
-                          <Component id="bSotano3regresar" min="-2" pref="100" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="146" max="-2" attributes="0"/>
-                          <Component id="jButton17" pref="100" max="32767" attributes="0"/>
-                          <EmptySpace min="-2" pref="100" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="68" max="-2" attributes="0"/>
+                          <Component id="Parqueo301" min="-2" pref="50" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Component id="Parqueo302" min="-2" pref="50" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Component id="Parqueo303" min="-2" pref="50" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Component id="Parqueo304" min="-2" pref="50" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Component id="Parqueo305" min="-2" pref="50" max="-2" attributes="0"/>
                       </Group>
-                      <Group type="102" alignment="1" attributes="0">
-                          <EmptySpace max="32767" attributes="0"/>
+                      <Component id="lSotano3titulo" min="-2" max="-2" attributes="0"/>
+                      <Group type="102" alignment="0" attributes="0">
                           <Component id="Parqueo306" min="-2" pref="50" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="57" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                              <Group type="102" attributes="0">
-                                  <Component id="Parqueo301" min="-2" pref="50" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="83" max="-2" attributes="0"/>
-                                  <Component id="Parqueo302" min="-2" pref="50" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="102" attributes="0">
-                                  <Component id="Parqueo307" min="-2" pref="50" max="-2" attributes="0"/>
-                                  <EmptySpace max="32767" attributes="0"/>
-                                  <Component id="Parqueo308" min="-2" pref="50" max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
-                          <EmptySpace min="-2" pref="80" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="1" attributes="0">
-                              <Component id="Parqueo303" min="-2" pref="50" max="-2" attributes="0"/>
-                              <Component id="Parqueo309" min="-2" pref="50" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace min="-2" pref="66" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="1" attributes="0">
-                              <Component id="Parqueo310" min="-2" pref="50" max="-2" attributes="0"/>
-                              <Component id="Parqueo304" min="-2" pref="50" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace min="-2" pref="66" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Component id="Parqueo307" min="-2" pref="50" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Component id="Parqueo308" min="-2" pref="50" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Component id="Parqueo309" min="-2" pref="50" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Component id="Parqueo310" min="-2" pref="50" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Component id="Parqueo311" min="-2" pref="50" max="-2" attributes="0"/>
                       </Group>
+                      <Component id="parqueo3regresar" alignment="0" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <Group type="103" groupAlignment="1" attributes="0">
-                      <Component id="Parqueo305" min="-2" pref="50" max="-2" attributes="0"/>
-                      <Component id="Parqueo311" min="-2" pref="50" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace min="-2" pref="51" max="-2" attributes="0"/>
+                  <EmptySpace pref="48" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -495,36 +467,32 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="lSotano3titulo" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" attributes="0">
-                          <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="Parqueo302" alignment="3" min="-2" pref="75" max="-2" attributes="0"/>
-                              <Component id="Parqueo303" alignment="3" min="-2" pref="75" max="-2" attributes="0"/>
-                              <Component id="Parqueo304" alignment="3" min="-2" pref="75" max="-2" attributes="0"/>
-                              <Component id="Parqueo305" alignment="3" min="-2" pref="75" max="-2" attributes="0"/>
-                              <Component id="Parqueo301" alignment="3" min="-2" pref="75" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace min="-2" pref="90" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="Parqueo310" alignment="3" min="-2" pref="75" max="-2" attributes="0"/>
-                              <Component id="Parqueo311" alignment="3" min="-2" pref="75" max="-2" attributes="0"/>
-                              <Component id="Parqueo309" alignment="3" min="-2" pref="75" max="-2" attributes="0"/>
-                              <Component id="Parqueo308" alignment="3" min="-2" pref="75" max="-2" attributes="0"/>
-                              <Component id="Parqueo307" alignment="3" min="-2" pref="75" max="-2" attributes="0"/>
-                              <Component id="Parqueo306" alignment="3" min="-2" pref="75" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace min="39" pref="104" max="32767" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="1" attributes="0">
-                          <EmptySpace max="32767" attributes="0"/>
-                          <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                              <Component id="jButton17" max="32767" attributes="0"/>
-                              <Component id="bSotano3regresar" max="32767" attributes="0"/>
-                          </Group>
-                          <EmptySpace max="-2" attributes="0"/>
+                      <Component id="Parqueo305" alignment="0" min="-2" pref="75" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="Parqueo301" alignment="0" min="-2" pref="75" max="-2" attributes="0"/>
+                          <Component id="Parqueo303" alignment="0" min="-2" pref="75" max="-2" attributes="0"/>
+                          <Component id="Parqueo304" alignment="1" min="-2" pref="75" max="-2" attributes="0"/>
+                          <Component id="Parqueo302" alignment="0" min="-2" pref="75" max="-2" attributes="0"/>
                       </Group>
                   </Group>
+                  <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="103" alignment="0" groupAlignment="0" attributes="0">
+                          <Group type="103" alignment="0" groupAlignment="1" attributes="0">
+                              <Component id="Parqueo306" min="-2" pref="75" max="-2" attributes="0"/>
+                              <Component id="Parqueo307" alignment="1" min="-2" pref="75" max="-2" attributes="0"/>
+                          </Group>
+                          <Component id="Parqueo309" alignment="0" min="-2" pref="75" max="-2" attributes="0"/>
+                          <Component id="Parqueo310" alignment="1" min="-2" pref="75" max="-2" attributes="0"/>
+                      </Group>
+                      <Component id="Parqueo311" alignment="0" min="-2" pref="75" max="-2" attributes="0"/>
+                      <Component id="Parqueo308" alignment="0" min="-2" pref="75" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Component id="parqueo3regresar" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace pref="44" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -624,23 +592,19 @@
             <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="Parqueo311MouseClicked"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="bSotano3regresar">
+        <Component class="javax.swing.JButton" name="parqueo3regresar">
           <Properties>
             <Property name="text" type="java.lang.String" value="Regresar"/>
           </Properties>
           <Events>
-            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="bSotano3regresarMouseClicked"/>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="parqueo3regresarMouseClicked"/>
           </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="jButton17">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="jButton17"/>
-          </Properties>
         </Component>
       </SubComponents>
     </Container>
     <Container class="javax.swing.JDialog" name="dTicket">
       <Properties>
+        <Property name="defaultCloseOperation" type="int" value="0"/>
         <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
           <Dimension value="[400, 300]"/>
         </Property>
@@ -877,9 +841,9 @@
                   <Component id="bStats" min="-2" pref="100" max="-2" attributes="0"/>
                   <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="bSotano1ir" alignment="0" max="32767" attributes="0"/>
-                          <Component id="bSotano2ir" alignment="0" max="32767" attributes="0"/>
-                          <Component id="bSotano3ir" alignment="0" max="32767" attributes="0"/>
+                          <Component id="parqueo1ir" alignment="0" max="32767" attributes="0"/>
+                          <Component id="parqueo2ir" alignment="0" max="32767" attributes="0"/>
+                          <Component id="parqueo3ir" alignment="0" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
@@ -915,19 +879,19 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="77" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="bSotano1ir" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="parqueo1ir" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="lSotano1Libre" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="lSotano1ocupado" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="bSotano2ir" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="parqueo2ir" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="lSotano2libre" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="lSotano2ocupado" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="bSotano3ir" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="parqueo3ir" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="lSotano3libre" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="lSotano3ocupado" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
@@ -944,7 +908,7 @@
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JButton" name="bSotano1ir">
+    <Component class="javax.swing.JButton" name="parqueo1ir">
       <Properties>
         <Property name="toolTipText" type="java.lang.String" value=""/>
         <Property name="label" type="java.lang.String" value="Sotano 1"/>
@@ -959,24 +923,23 @@
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="bSotano1irMouseClicked"/>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="parqueo1irMouseClicked"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="bSotano2ir">
+    <Component class="javax.swing.JButton" name="parqueo2ir">
       <Properties>
         <Property name="label" type="java.lang.String" value="Sotano 2"/>
       </Properties>
       <Events>
-        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="bSotano2irMouseClicked"/>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bSotano2irActionPerformed"/>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="parqueo2irMouseClicked"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="bSotano3ir">
+    <Component class="javax.swing.JButton" name="parqueo3ir">
       <Properties>
         <Property name="label" type="java.lang.String" value="Sotano 3"/>
       </Properties>
       <Events>
-        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="bSotano3irMouseClicked"/>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="parqueo3irMouseClicked"/>
       </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="lSotano1Libre">
