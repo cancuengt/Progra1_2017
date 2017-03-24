@@ -142,7 +142,7 @@ public class proyecto extends javax.swing.JFrame {
             if(JOptionPane.showConfirmDialog (null,"¿Desea pagar este parqueo?",null,JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION){
                 parqueo.marcarSalida();
                 long tiempo = parqueo.calcularTiempo();
-                String texto = "Paraqueo El Descanso\n\n";
+                String texto = "Parqueo El Descanso\n\n";
                 texto+="Hora de entrada: " + parqueo.getStingEntrada()+"\n";
                 texto+="Hora de salida:  " + parqueo.getStingSalida()+"\n";
                 texto+="Tiempo total:    " + parqueo.getStringTiempo(tiempo)+"\n";
@@ -234,9 +234,7 @@ public class proyecto extends javax.swing.JFrame {
         bStats = new javax.swing.JButton();
 
         fSotano1.setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
-        fSotano1.setMaximumSize(new java.awt.Dimension(450, 300));
         fSotano1.setMinimumSize(new java.awt.Dimension(450, 300));
-        fSotano1.setPreferredSize(new java.awt.Dimension(450, 300));
         fSotano1.setSize(new java.awt.Dimension(450, 300));
 
         lSotano1titulo.setText("Sotano 1");
@@ -406,9 +404,7 @@ public class proyecto extends javax.swing.JFrame {
         );
 
         fSotano2.setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
-        fSotano2.setMaximumSize(new java.awt.Dimension(450, 300));
         fSotano2.setMinimumSize(new java.awt.Dimension(450, 300));
-        fSotano2.setPreferredSize(new java.awt.Dimension(450, 300));
         fSotano2.setSize(new java.awt.Dimension(450, 300));
 
         lSotano2titulo.setText("Sotano 2");
@@ -708,6 +704,11 @@ public class proyecto extends javax.swing.JFrame {
         bCerrarTicket.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 bCerrarTicketMouseClicked(evt);
+            }
+        });
+        bCerrarTicket.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bCerrarTicketActionPerformed(evt);
             }
         });
 
@@ -1285,6 +1286,10 @@ public class proyecto extends javax.swing.JFrame {
         this.sotano3[10] = this.accionParqueo(this.sotano3[10]);
         this.marcarParqueos();
     }//GEN-LAST:event_Parqueo311MouseClicked
+
+    private void bCerrarTicketActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bCerrarTicketActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_bCerrarTicketActionPerformed
 
     /**
      * @param args the command line arguments
